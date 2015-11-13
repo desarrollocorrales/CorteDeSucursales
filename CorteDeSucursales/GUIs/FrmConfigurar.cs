@@ -9,16 +9,11 @@ using DevExpress.XtraEditors;
 
 namespace CorteDeSucursales.GUIs
 {
-    public partial class FrmLogin : DevExpress.XtraEditors.XtraForm
+    public partial class FrmConfigurar : DevExpress.XtraEditors.XtraForm
     {
-        public FrmLogin()
+        public FrmConfigurar()
         {
             InitializeComponent();
-        }
-
-        private void btnConfigurar_Click(object sender, EventArgs e)
-        {
-            new FrmConfigurar().ShowDialog();
         }
     }
 }

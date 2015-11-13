@@ -5,3 +5,5 @@ G:\Github\CorteDeSucursales\CorteDeSucursales\obj\x86\Debug\CorteDeSucursales.Pr
 G:\Github\CorteDeSucursales\CorteDeSucursales\obj\x86\Debug\CorteDeSucursales.csproj.GenerateResource.Cache
 G:\Github\CorteDeSucursales\CorteDeSucursales\obj\x86\Debug\CorteDeSucursales.exe
 G:\Github\CorteDeSucursales\CorteDeSucursales\obj\x86\Debug\CorteDeSucursales.pdb
+G:\Github\CorteDeSucursales\CorteDeSucursales\obj\x86\Debug\CorteDeSucursales.exe.licenses
+G:\Github\CorteDeSucursales\CorteDeSucursales\obj\x86\Debug\CorteDeSucursales.GUIs.FrmConfigurar.resources

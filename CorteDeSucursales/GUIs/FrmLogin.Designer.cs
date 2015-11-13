@@ -28,19 +28,124 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
+            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
+            this.txbUsuario = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.txbContraseña = new DevExpress.XtraEditors.TextEdit();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnConfigurar = new DevExpress.XtraEditors.SimpleButton();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbUsuario.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbContraseña.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // XtraForm1
+            // pictureEdit1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
+            this.pictureEdit1.Location = new System.Drawing.Point(12, 12);
+            this.pictureEdit1.Name = "pictureEdit1";
+            this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
+            this.pictureEdit1.Size = new System.Drawing.Size(440, 156);
+            this.pictureEdit1.TabIndex = 1;
+            // 
+            // txbUsuario
+            // 
+            this.txbUsuario.Location = new System.Drawing.Point(108, 174);
+            this.txbUsuario.Name = "txbUsuario";
+            this.txbUsuario.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbUsuario.Properties.Appearance.Options.UseFont = true;
+            this.txbUsuario.Size = new System.Drawing.Size(333, 25);
+            this.txbUsuario.TabIndex = 2;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Location = new System.Drawing.Point(49, 177);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(53, 18);
+            this.labelControl1.TabIndex = 3;
+            this.labelControl1.Text = "Usuario:";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Location = new System.Drawing.Point(23, 208);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(79, 18);
+            this.labelControl2.TabIndex = 5;
+            this.labelControl2.Text = "Contraseña:";
+            // 
+            // txbContraseña
+            // 
+            this.txbContraseña.Location = new System.Drawing.Point(108, 205);
+            this.txbContraseña.Name = "txbContraseña";
+            this.txbContraseña.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbContraseña.Properties.Appearance.Options.UseFont = true;
+            this.txbContraseña.Size = new System.Drawing.Size(333, 25);
+            this.txbContraseña.TabIndex = 4;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.Location = new System.Drawing.Point(192, 236);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(80, 30);
+            this.simpleButton1.TabIndex = 6;
+            this.simpleButton1.Text = "Entrar";
+            // 
+            // btnConfigurar
+            // 
+            this.btnConfigurar.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfigurar.Appearance.Options.UseFont = true;
+            this.btnConfigurar.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnConfigurar.Location = new System.Drawing.Point(0, 277);
+            this.btnConfigurar.Name = "btnConfigurar";
+            this.btnConfigurar.Size = new System.Drawing.Size(464, 25);
+            this.btnConfigurar.TabIndex = 7;
+            this.btnConfigurar.Text = "Configurar";
+            this.btnConfigurar.Click += new System.EventHandler(this.btnConfigurar_Click);
+            // 
+            // FrmLogin
+            // 
+            this.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Appearance.Options.UseFont = true;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(477, 262);
-            this.Name = "XtraForm1";
-            this.Text = "XtraForm1";
+            this.ClientSize = new System.Drawing.Size(464, 302);
+            this.Controls.Add(this.pictureEdit1);
+            this.Controls.Add(this.btnConfigurar);
+            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.labelControl2);
+            this.Controls.Add(this.txbContraseña);
+            this.Controls.Add(this.labelControl1);
+            this.Controls.Add(this.txbUsuario);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximumSize = new System.Drawing.Size(480, 340);
+            this.MinimumSize = new System.Drawing.Size(480, 340);
+            this.Name = "FrmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Carnicería Los Corrales - Inicio de Sesión";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbUsuario.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbContraseña.Properties)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private DevExpress.XtraEditors.PictureEdit pictureEdit1;
+        private DevExpress.XtraEditors.TextEdit txbUsuario;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.TextEdit txbContraseña;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnConfigurar;
     }
 }
