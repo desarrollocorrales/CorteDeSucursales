@@ -30,7 +30,10 @@
         {
             this.tbControl = new DevExpress.XtraTab.XtraTabControl();
             this.tabUsuarios = new DevExpress.XtraTab.XtraTabPage();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.btnModificarUsuario = new DevExpress.XtraEditors.SimpleButton();
+            this.btnNuevoUsuario = new DevExpress.XtraEditors.SimpleButton();
+            this.pnlUsuarios = new DevExpress.XtraEditors.PanelControl();
+            this.btnEliminarUsuario = new DevExpress.XtraEditors.SimpleButton();
             this.btnGuardarUsuario = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
@@ -41,7 +44,7 @@
             this.txbNombreCompleto = new DevExpress.XtraEditors.TextEdit();
             this.txbContraseña1 = new DevExpress.XtraEditors.TextEdit();
             this.gcUsuarios = new DevExpress.XtraEditors.GroupControl();
-            this.listBoxControl1 = new DevExpress.XtraEditors.ListBoxControl();
+            this.lbUsuarios = new DevExpress.XtraEditors.ListBoxControl();
             this.tabMicrosip = new DevExpress.XtraTab.XtraTabPage();
             this.btnGuardarMicrosip = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
@@ -60,15 +63,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbControl)).BeginInit();
             this.tbControl.SuspendLayout();
             this.tabUsuarios.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlUsuarios)).BeginInit();
+            this.pnlUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txbNombreUsuario.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbContraseña2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbNombreCompleto.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbContraseña1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcUsuarios)).BeginInit();
             this.gcUsuarios.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.listBoxControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbUsuarios)).BeginInit();
             this.tabMicrosip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txbPuerto.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbContraseña.Properties)).BeginInit();
@@ -97,41 +100,83 @@
             // 
             // tabUsuarios
             // 
-            this.tabUsuarios.Controls.Add(this.panelControl1);
+            this.tabUsuarios.Controls.Add(this.btnModificarUsuario);
+            this.tabUsuarios.Controls.Add(this.btnNuevoUsuario);
+            this.tabUsuarios.Controls.Add(this.pnlUsuarios);
             this.tabUsuarios.Controls.Add(this.gcUsuarios);
             this.tabUsuarios.Name = "tabUsuarios";
             this.tabUsuarios.Size = new System.Drawing.Size(714, 416);
             this.tabUsuarios.Text = "Usuarios";
             // 
-            // panelControl1
+            // btnModificarUsuario
             // 
-            this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnModificarUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnModificarUsuario.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarUsuario.Appearance.Options.UseFont = true;
+            this.btnModificarUsuario.Location = new System.Drawing.Point(296, 29);
+            this.btnModificarUsuario.Name = "btnModificarUsuario";
+            this.btnModificarUsuario.Size = new System.Drawing.Size(75, 26);
+            this.btnModificarUsuario.TabIndex = 28;
+            this.btnModificarUsuario.Text = "Modificar";
+            this.btnModificarUsuario.Click += new System.EventHandler(this.btnModificarUsuario_Click);
+            // 
+            // btnNuevoUsuario
+            // 
+            this.btnNuevoUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnNuevoUsuario.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevoUsuario.Appearance.Options.UseFont = true;
+            this.btnNuevoUsuario.Location = new System.Drawing.Point(215, 29);
+            this.btnNuevoUsuario.Name = "btnNuevoUsuario";
+            this.btnNuevoUsuario.Size = new System.Drawing.Size(75, 26);
+            this.btnNuevoUsuario.TabIndex = 27;
+            this.btnNuevoUsuario.Text = "Nuevo";
+            this.btnNuevoUsuario.Click += new System.EventHandler(this.btnNuevoUsuario_Click);
+            // 
+            // pnlUsuarios
+            // 
+            this.pnlUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelControl1.Controls.Add(this.btnGuardarUsuario);
-            this.panelControl1.Controls.Add(this.labelControl10);
-            this.panelControl1.Controls.Add(this.labelControl8);
-            this.panelControl1.Controls.Add(this.labelControl9);
-            this.panelControl1.Controls.Add(this.txbNombreUsuario);
-            this.panelControl1.Controls.Add(this.labelControl7);
-            this.panelControl1.Controls.Add(this.txbContraseña2);
-            this.panelControl1.Controls.Add(this.txbNombreCompleto);
-            this.panelControl1.Controls.Add(this.txbContraseña1);
-            this.panelControl1.Location = new System.Drawing.Point(215, 29);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(492, 378);
-            this.panelControl1.TabIndex = 26;
+            this.pnlUsuarios.Controls.Add(this.btnEliminarUsuario);
+            this.pnlUsuarios.Controls.Add(this.btnGuardarUsuario);
+            this.pnlUsuarios.Controls.Add(this.labelControl10);
+            this.pnlUsuarios.Controls.Add(this.labelControl8);
+            this.pnlUsuarios.Controls.Add(this.labelControl9);
+            this.pnlUsuarios.Controls.Add(this.txbNombreUsuario);
+            this.pnlUsuarios.Controls.Add(this.labelControl7);
+            this.pnlUsuarios.Controls.Add(this.txbContraseña2);
+            this.pnlUsuarios.Controls.Add(this.txbNombreCompleto);
+            this.pnlUsuarios.Controls.Add(this.txbContraseña1);
+            this.pnlUsuarios.Location = new System.Drawing.Point(215, 56);
+            this.pnlUsuarios.Name = "pnlUsuarios";
+            this.pnlUsuarios.Size = new System.Drawing.Size(492, 351);
+            this.pnlUsuarios.TabIndex = 26;
+            // 
+            // btnEliminarUsuario
+            // 
+            this.btnEliminarUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnEliminarUsuario.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarUsuario.Appearance.Options.UseFont = true;
+            this.btnEliminarUsuario.Location = new System.Drawing.Point(290, 304);
+            this.btnEliminarUsuario.Name = "btnEliminarUsuario";
+            this.btnEliminarUsuario.Size = new System.Drawing.Size(75, 30);
+            this.btnEliminarUsuario.TabIndex = 24;
+            this.btnEliminarUsuario.Text = "Eliminar";
+            this.btnEliminarUsuario.Visible = false;
+            this.btnEliminarUsuario.Click += new System.EventHandler(this.btnEliminarUsuario_Click);
             // 
             // btnGuardarUsuario
             // 
             this.btnGuardarUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnGuardarUsuario.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarUsuario.Appearance.Options.UseFont = true;
-            this.btnGuardarUsuario.Location = new System.Drawing.Point(209, 308);
+            this.btnGuardarUsuario.Enabled = false;
+            this.btnGuardarUsuario.Location = new System.Drawing.Point(209, 304);
             this.btnGuardarUsuario.Name = "btnGuardarUsuario";
             this.btnGuardarUsuario.Size = new System.Drawing.Size(75, 30);
             this.btnGuardarUsuario.TabIndex = 23;
             this.btnGuardarUsuario.Text = "Guardar";
+            this.btnGuardarUsuario.Click += new System.EventHandler(this.btnGuardarUsuario_Click);
             // 
             // labelControl10
             // 
@@ -166,6 +211,7 @@
             // txbNombreUsuario
             // 
             this.txbNombreUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txbNombreUsuario.Enabled = false;
             this.txbNombreUsuario.Location = new System.Drawing.Point(46, 135);
             this.txbNombreUsuario.Name = "txbNombreUsuario";
             this.txbNombreUsuario.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -186,16 +232,19 @@
             // txbContraseña2
             // 
             this.txbContraseña2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txbContraseña2.Enabled = false;
             this.txbContraseña2.Location = new System.Drawing.Point(46, 261);
             this.txbContraseña2.Name = "txbContraseña2";
             this.txbContraseña2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbContraseña2.Properties.Appearance.Options.UseFont = true;
+            this.txbContraseña2.Properties.PasswordChar = '*';
             this.txbContraseña2.Size = new System.Drawing.Size(200, 25);
             this.txbContraseña2.TabIndex = 21;
             // 
             // txbNombreCompleto
             // 
             this.txbNombreCompleto.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txbNombreCompleto.Enabled = false;
             this.txbNombreCompleto.Location = new System.Drawing.Point(46, 72);
             this.txbNombreCompleto.Name = "txbNombreCompleto";
             this.txbNombreCompleto.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -206,10 +255,12 @@
             // txbContraseña1
             // 
             this.txbContraseña1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txbContraseña1.Enabled = false;
             this.txbContraseña1.Location = new System.Drawing.Point(46, 198);
             this.txbContraseña1.Name = "txbContraseña1";
             this.txbContraseña1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbContraseña1.Properties.Appearance.Options.UseFont = true;
+            this.txbContraseña1.Properties.PasswordChar = '*';
             this.txbContraseña1.Size = new System.Drawing.Size(200, 25);
             this.txbContraseña1.TabIndex = 19;
             // 
@@ -219,24 +270,24 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.gcUsuarios.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gcUsuarios.AppearanceCaption.Options.UseFont = true;
-            this.gcUsuarios.Controls.Add(this.listBoxControl1);
+            this.gcUsuarios.Controls.Add(this.lbUsuarios);
             this.gcUsuarios.Location = new System.Drawing.Point(11, 29);
             this.gcUsuarios.Name = "gcUsuarios";
             this.gcUsuarios.Size = new System.Drawing.Size(200, 380);
             this.gcUsuarios.TabIndex = 25;
             this.gcUsuarios.Text = "Lista de Usuarios";
             // 
-            // listBoxControl1
+            // lbUsuarios
             // 
-            this.listBoxControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBoxControl1.Appearance.Options.UseFont = true;
-            this.listBoxControl1.Appearance.Options.UseTextOptions = true;
-            this.listBoxControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.listBoxControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBoxControl1.Location = new System.Drawing.Point(2, 27);
-            this.listBoxControl1.Name = "listBoxControl1";
-            this.listBoxControl1.Size = new System.Drawing.Size(196, 351);
-            this.listBoxControl1.TabIndex = 24;
+            this.lbUsuarios.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUsuarios.Appearance.Options.UseFont = true;
+            this.lbUsuarios.Appearance.Options.UseTextOptions = true;
+            this.lbUsuarios.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lbUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbUsuarios.Location = new System.Drawing.Point(2, 27);
+            this.lbUsuarios.Name = "lbUsuarios";
+            this.lbUsuarios.Size = new System.Drawing.Size(196, 351);
+            this.lbUsuarios.TabIndex = 24;
             // 
             // tabMicrosip
             // 
@@ -260,11 +311,12 @@
             this.btnGuardarMicrosip.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnGuardarMicrosip.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarMicrosip.Appearance.Options.UseFont = true;
-            this.btnGuardarMicrosip.Location = new System.Drawing.Point(317, 363);
+            this.btnGuardarMicrosip.Location = new System.Drawing.Point(317, 365);
             this.btnGuardarMicrosip.Name = "btnGuardarMicrosip";
             this.btnGuardarMicrosip.Size = new System.Drawing.Size(80, 30);
             this.btnGuardarMicrosip.TabIndex = 22;
             this.btnGuardarMicrosip.Text = "Guardar";
+            this.btnGuardarMicrosip.Click += new System.EventHandler(this.btnGuardarMicrosip_Click);
             // 
             // labelControl6
             // 
@@ -303,6 +355,7 @@
             this.txbContraseña.Name = "txbContraseña";
             this.txbContraseña.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbContraseña.Properties.Appearance.Options.UseFont = true;
+            this.txbContraseña.Properties.PasswordChar = '*';
             this.txbContraseña.Size = new System.Drawing.Size(321, 25);
             this.txbContraseña.TabIndex = 19;
             // 
@@ -406,19 +459,20 @@
             this.Name = "FrmConfigurar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Carnicería Los Corrales - Corte de Sucursal - Configurar";
+            this.Load += new System.EventHandler(this.FrmConfigurar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tbControl)).EndInit();
             this.tbControl.ResumeLayout(false);
             this.tabUsuarios.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
-            this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlUsuarios)).EndInit();
+            this.pnlUsuarios.ResumeLayout(false);
+            this.pnlUsuarios.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txbNombreUsuario.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbContraseña2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbNombreCompleto.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbContraseña1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcUsuarios)).EndInit();
             this.gcUsuarios.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.listBoxControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbUsuarios)).EndInit();
             this.tabMicrosip.ResumeLayout(false);
             this.tabMicrosip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txbPuerto.Properties)).EndInit();
@@ -441,7 +495,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl lbTitulo;
         private DevExpress.XtraEditors.PanelControl pnlTitulo;
-        private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraEditors.PanelControl pnlUsuarios;
         private DevExpress.XtraEditors.SimpleButton btnGuardarUsuario;
         private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.LabelControl labelControl8;
@@ -452,7 +506,7 @@
         private DevExpress.XtraEditors.TextEdit txbNombreCompleto;
         private DevExpress.XtraEditors.TextEdit txbContraseña1;
         private DevExpress.XtraEditors.GroupControl gcUsuarios;
-        private DevExpress.XtraEditors.ListBoxControl listBoxControl1;
+        private DevExpress.XtraEditors.ListBoxControl lbUsuarios;
         private DevExpress.XtraEditors.SimpleButton btnGuardarMicrosip;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.TextEdit txbPuerto;
@@ -464,5 +518,8 @@
         private DevExpress.XtraEditors.TextEdit txbBaseDeDatos;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.TextEdit txbServidor;
+        private DevExpress.XtraEditors.SimpleButton btnModificarUsuario;
+        private DevExpress.XtraEditors.SimpleButton btnNuevoUsuario;
+        private DevExpress.XtraEditors.SimpleButton btnEliminarUsuario;
     }
 }
