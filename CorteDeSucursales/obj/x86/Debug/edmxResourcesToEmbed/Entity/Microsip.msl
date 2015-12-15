@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="MicrosipEntities">
+    <EntitySetMapping Name="CAJAS">
+      <EntityTypeMapping TypeName="Model.CAJAS">
+        <MappingFragment StoreEntitySet="CAJAS">
+          <ScalarProperty Name="CAJA_ID" ColumnName="CAJA_ID" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="ALMACEN_ID" ColumnName="ALMACEN_ID" />
+          <ScalarProperty Name="MODIFICAR_ALMACEN" ColumnName="MODIFICAR_ALMACEN" />
+          <ScalarProperty Name="VENTAS_DESDE" ColumnName="VENTAS_DESDE" />
+          <ScalarProperty Name="PERMITE_COBRAR" ColumnName="PERMITE_COBRAR" />
+          <ScalarProperty Name="PAUSA_TERMINAR_VENTA" ColumnName="PAUSA_TERMINAR_VENTA" />
+          <ScalarProperty Name="FORMA_COBRO_PREDET_ID" ColumnName="FORMA_COBRO_PREDET_ID" />
+          <ScalarProperty Name="IMAGENES_CAJA_ID" ColumnName="IMAGENES_CAJA_ID" />
+          <ScalarProperty Name="MANEJAR_VENDEDORES" ColumnName="MANEJAR_VENDEDORES" />
+          <ScalarProperty Name="USUARIO_CREADOR" ColumnName="USUARIO_CREADOR" />
+          <ScalarProperty Name="FECHA_HORA_CREACION" ColumnName="FECHA_HORA_CREACION" />
+          <ScalarProperty Name="USUARIO_AUT_CREACION" ColumnName="USUARIO_AUT_CREACION" />
+          <ScalarProperty Name="USUARIO_ULT_MODIF" ColumnName="USUARIO_ULT_MODIF" />
+          <ScalarProperty Name="FECHA_HORA_ULT_MODIF" ColumnName="FECHA_HORA_ULT_MODIF" />
+          <ScalarProperty Name="USUARIO_AUT_MODIF" ColumnName="USUARIO_AUT_MODIF" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DOCTOS_PV">
+      <EntityTypeMapping TypeName="Model.DOCTOS_PV">
+        <MappingFragment StoreEntitySet="DOCTOS_PV">
+          <ScalarProperty Name="DOCTO_PV_ID" ColumnName="DOCTO_PV_ID" />
+          <ScalarProperty Name="CAJA_ID" ColumnName="CAJA_ID" />
+          <ScalarProperty Name="TIPO_DOCTO" ColumnName="TIPO_DOCTO" />
+          <ScalarProperty Name="FOLIO" ColumnName="FOLIO" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="HORA" ColumnName="HORA" />
+          <ScalarProperty Name="CAJERO_ID" ColumnName="CAJERO_ID" />
+          <ScalarProperty Name="CLAVE_CLIENTE" ColumnName="CLAVE_CLIENTE" />
+          <ScalarProperty Name="CLIENTE_ID" ColumnName="CLIENTE_ID" />
+          <ScalarProperty Name="CLAVE_CLIENTE_FAC" ColumnName="CLAVE_CLIENTE_FAC" />
+          <ScalarProperty Name="CLIENTE_FAC_ID" ColumnName="CLIENTE_FAC_ID" />
+          <ScalarProperty Name="DIR_CLI_ID" ColumnName="DIR_CLI_ID" />
+          <ScalarProperty Name="ALMACEN_ID" ColumnName="ALMACEN_ID" />
+          <ScalarProperty Name="MONEDA_ID" ColumnName="MONEDA_ID" />
+          <ScalarProperty Name="IMPUESTO_INCLUIDO" ColumnName="IMPUESTO_INCLUIDO" />
+          <ScalarProperty Name="TIPO_CAMBIO" ColumnName="TIPO_CAMBIO" />
+          <ScalarProperty Name="TIPO_DSCTO" ColumnName="TIPO_DSCTO" />
+          <ScalarProperty Name="DSCTO_PCTJE" ColumnName="DSCTO_PCTJE" />
+          <ScalarProperty Name="DSCTO_IMPORTE" ColumnName="DSCTO_IMPORTE" />
+          <ScalarProperty Name="ESTATUS" ColumnName="ESTATUS" />
+          <ScalarProperty Name="APLICADO" ColumnName="APLICADO" />
+          <ScalarProperty Name="IMPORTE_NETO" ColumnName="IMPORTE_NETO" />
+          <ScalarProperty Name="TOTAL_IMPUESTOS" ColumnName="TOTAL_IMPUESTOS" />
+          <ScalarProperty Name="IMPORTE_DONATIVO" ColumnName="IMPORTE_DONATIVO" />
+          <ScalarProperty Name="TOTAL_FPGC" ColumnName="TOTAL_FPGC" />
+          <ScalarProperty Name="TICKET_EMITIDO" ColumnName="TICKET_EMITIDO" />
+          <ScalarProperty Name="FORMA_GLOBAL_EMITIDA" ColumnName="FORMA_GLOBAL_EMITIDA" />
+          <ScalarProperty Name="FORMA_EMITIDA" ColumnName="FORMA_EMITIDA" />
+          <ScalarProperty Name="CONTABILIZADO" ColumnName="CONTABILIZADO" />
+          <ScalarProperty Name="SISTEMA_ORIGEN" ColumnName="SISTEMA_ORIGEN" />
+          <ScalarProperty Name="VENDEDOR_ID" ColumnName="VENDEDOR_ID" />
+          <ScalarProperty Name="CARGAR_SUN" ColumnName="CARGAR_SUN" />
+          <ScalarProperty Name="PERSONA" ColumnName="PERSONA" />
+          <ScalarProperty Name="TIPO_GEN_FAC" ColumnName="TIPO_GEN_FAC" />
+          <ScalarProperty Name="ES_FAC_GLOBAL" ColumnName="ES_FAC_GLOBAL" />
+          <ScalarProperty Name="FECHA_INI_FAC_GLOBAL" ColumnName="FECHA_INI_FAC_GLOBAL" />
+          <ScalarProperty Name="FECHA_FIN_FAC_GLOBAL" ColumnName="FECHA_FIN_FAC_GLOBAL" />
+          <ScalarProperty Name="INCL_FACTURADOS_FAC_GLOBAL" ColumnName="INCL_FACTURADOS_FAC_GLOBAL" />
+          <ScalarProperty Name="ALMACEN_ID_FAC_GLOBAL" ColumnName="ALMACEN_ID_FAC_GLOBAL" />
+          <ScalarProperty Name="REFER_RETING" ColumnName="REFER_RETING" />
+          <ScalarProperty Name="UNID_COMPROM" ColumnName="UNID_COMPROM" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="IMPUESTO_SUSTITUIDO_ID" ColumnName="IMPUESTO_SUSTITUIDO_ID" />
+          <ScalarProperty Name="IMPUESTO_SUSTITUTO_ID" ColumnName="IMPUESTO_SUSTITUTO_ID" />
+          <ScalarProperty Name="ES_CFD" ColumnName="ES_CFD" />
+          <ScalarProperty Name="MODALIDAD_FACTURACION" ColumnName="MODALIDAD_FACTURACION" />
+          <ScalarProperty Name="ENVIADO" ColumnName="ENVIADO" />
+          <ScalarProperty Name="EMAIL_ENVIO" ColumnName="EMAIL_ENVIO" />
+          <ScalarProperty Name="USUARIO_CREADOR" ColumnName="USUARIO_CREADOR" />
+          <ScalarProperty Name="CFDI_CERTIFICADO" ColumnName="CFDI_CERTIFICADO" />
+          <ScalarProperty Name="FECHA_HORA_CREACION" ColumnName="FECHA_HORA_CREACION" />
+          <ScalarProperty Name="USUARIO_ULT_MODIF" ColumnName="USUARIO_ULT_MODIF" />
+          <ScalarProperty Name="USUARIO_AUT_CREACION" ColumnName="USUARIO_AUT_CREACION" />
+          <ScalarProperty Name="FECHA_HORA_ULT_MODIF" ColumnName="FECHA_HORA_ULT_MODIF" />
+          <ScalarProperty Name="USUARIO_CANCELACION" ColumnName="USUARIO_CANCELACION" />
+          <ScalarProperty Name="USUARIO_AUT_MODIF" ColumnName="USUARIO_AUT_MODIF" />
+          <ScalarProperty Name="FECHA_HORA_CANCELACION" ColumnName="FECHA_HORA_CANCELACION" />
+          <ScalarProperty Name="FECHA_HORA_ENVIO" ColumnName="FECHA_HORA_ENVIO" />
+          <ScalarProperty Name="USUARIO_AUT_CANCELACION" ColumnName="USUARIO_AUT_CANCELACION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MOVTOS_CAJAS">
+      <EntityTypeMapping TypeName="Model.MOVTOS_CAJAS">
+        <MappingFragment StoreEntitySet="MOVTOS_CAJAS">
+          <ScalarProperty Name="MOVTO_CAJA_ID" ColumnName="MOVTO_CAJA_ID" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="HORA" ColumnName="HORA" />
+          <ScalarProperty Name="TIPO_MOVTO" ColumnName="TIPO_MOVTO" />
+          <ScalarProperty Name="CAJA_ID" ColumnName="CAJA_ID" />
+          <ScalarProperty Name="CAJEROS_HABILITADOS" ColumnName="CAJEROS_HABILITADOS" />
+          <ScalarProperty Name="FORMA_EMITIDA" ColumnName="FORMA_EMITIDA" />
+          <ScalarProperty Name="USUARIO_CREADOR" ColumnName="USUARIO_CREADOR" />
+          <ScalarProperty Name="FECHA_HORA_CREACION" ColumnName="FECHA_HORA_CREACION" />
+          <ScalarProperty Name="USUARIO_AUT_CREACION" ColumnName="USUARIO_AUT_CREACION" />
+          <ScalarProperty Name="USUARIO_ULT_MODIF" ColumnName="USUARIO_ULT_MODIF" />
+          <ScalarProperty Name="FECHA_HORA_ULT_MODIF" ColumnName="FECHA_HORA_ULT_MODIF" />
+          <ScalarProperty Name="USUARIO_AUT_MODIF" ColumnName="USUARIO_AUT_MODIF" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

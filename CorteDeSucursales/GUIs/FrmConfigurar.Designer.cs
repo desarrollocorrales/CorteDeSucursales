@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConfigurar));
             this.tbControl = new DevExpress.XtraTab.XtraTabControl();
             this.tabUsuarios = new DevExpress.XtraTab.XtraTabPage();
             this.btnModificarUsuario = new DevExpress.XtraEditors.SimpleButton();
@@ -46,6 +48,8 @@
             this.gcUsuarios = new DevExpress.XtraEditors.GroupControl();
             this.lbUsuarios = new DevExpress.XtraEditors.ListBoxControl();
             this.tabMicrosip = new DevExpress.XtraTab.XtraTabPage();
+            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.txbSucursal = new DevExpress.XtraEditors.TextEdit();
             this.btnGuardarMicrosip = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.txbPuerto = new DevExpress.XtraEditors.TextEdit();
@@ -57,6 +61,21 @@
             this.txbBaseDeDatos = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txbServidor = new DevExpress.XtraEditors.TextEdit();
+            this.tabConceptosCC = new DevExpress.XtraTab.XtraTabPage();
+            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
+            this.gridCheques = new DevExpress.XtraGrid.GridControl();
+            this.seleccionConceptosCCBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gvCheques = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnGuardarConceptos = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            this.gridEfectivo = new DevExpress.XtraGrid.GridControl();
+            this.gvEfectivo = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colSeleccionado = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colConcepto = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.conceptosCCBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.lbTitulo = new DevExpress.XtraEditors.LabelControl();
             this.pnlTitulo = new DevExpress.XtraEditors.PanelControl();
@@ -73,11 +92,19 @@
             this.gcUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lbUsuarios)).BeginInit();
             this.tabMicrosip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txbSucursal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbPuerto.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbContraseña.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbUsuario.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbBaseDeDatos.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbServidor.Properties)).BeginInit();
+            this.tabConceptosCC.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridCheques)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seleccionConceptosCCBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvCheques)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridEfectivo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvEfectivo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.conceptosCCBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlTitulo)).BeginInit();
             this.pnlTitulo.SuspendLayout();
             this.SuspendLayout();
@@ -96,7 +123,8 @@
             this.tbControl.TabIndex = 0;
             this.tbControl.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tabUsuarios,
-            this.tabMicrosip});
+            this.tabMicrosip,
+            this.tabConceptosCC});
             // 
             // tabUsuarios
             // 
@@ -291,6 +319,8 @@
             // 
             // tabMicrosip
             // 
+            this.tabMicrosip.Controls.Add(this.labelControl12);
+            this.tabMicrosip.Controls.Add(this.txbSucursal);
             this.tabMicrosip.Controls.Add(this.btnGuardarMicrosip);
             this.tabMicrosip.Controls.Add(this.labelControl6);
             this.tabMicrosip.Controls.Add(this.txbPuerto);
@@ -305,6 +335,26 @@
             this.tabMicrosip.Name = "tabMicrosip";
             this.tabMicrosip.Size = new System.Drawing.Size(714, 416);
             this.tabMicrosip.Text = "Microsip";
+            // 
+            // labelControl12
+            // 
+            this.labelControl12.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl12.Location = new System.Drawing.Point(113, 19);
+            this.labelControl12.Name = "labelControl12";
+            this.labelControl12.Size = new System.Drawing.Size(70, 18);
+            this.labelControl12.TabIndex = 23;
+            this.labelControl12.Text = "Sucursal:";
+            // 
+            // txbSucursal
+            // 
+            this.txbSucursal.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txbSucursal.Location = new System.Drawing.Point(113, 43);
+            this.txbSucursal.Name = "txbSucursal";
+            this.txbSucursal.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbSucursal.Properties.Appearance.Options.UseFont = true;
+            this.txbSucursal.Size = new System.Drawing.Size(489, 25);
+            this.txbSucursal.TabIndex = 24;
             // 
             // btnGuardarMicrosip
             // 
@@ -322,7 +372,7 @@
             // 
             this.labelControl6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl6.Location = new System.Drawing.Point(113, 300);
+            this.labelControl6.Location = new System.Drawing.Point(113, 294);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(55, 18);
             this.labelControl6.TabIndex = 20;
@@ -331,7 +381,7 @@
             // txbPuerto
             // 
             this.txbPuerto.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txbPuerto.Location = new System.Drawing.Point(113, 324);
+            this.txbPuerto.Location = new System.Drawing.Point(113, 318);
             this.txbPuerto.Name = "txbPuerto";
             this.txbPuerto.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbPuerto.Properties.Appearance.Options.UseFont = true;
@@ -342,7 +392,7 @@
             // 
             this.labelControl5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl5.Location = new System.Drawing.Point(113, 237);
+            this.labelControl5.Location = new System.Drawing.Point(113, 239);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(90, 18);
             this.labelControl5.TabIndex = 18;
@@ -351,7 +401,7 @@
             // txbContraseña
             // 
             this.txbContraseña.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txbContraseña.Location = new System.Drawing.Point(113, 261);
+            this.txbContraseña.Location = new System.Drawing.Point(113, 263);
             this.txbContraseña.Name = "txbContraseña";
             this.txbContraseña.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbContraseña.Properties.Appearance.Options.UseFont = true;
@@ -363,7 +413,7 @@
             // 
             this.labelControl4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl4.Location = new System.Drawing.Point(113, 166);
+            this.labelControl4.Location = new System.Drawing.Point(113, 184);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(63, 18);
             this.labelControl4.TabIndex = 16;
@@ -372,7 +422,7 @@
             // txbUsuario
             // 
             this.txbUsuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txbUsuario.Location = new System.Drawing.Point(113, 190);
+            this.txbUsuario.Location = new System.Drawing.Point(113, 208);
             this.txbUsuario.Name = "txbUsuario";
             this.txbUsuario.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbUsuario.Properties.Appearance.Options.UseFont = true;
@@ -383,7 +433,7 @@
             // 
             this.labelControl3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl3.Location = new System.Drawing.Point(113, 95);
+            this.labelControl3.Location = new System.Drawing.Point(113, 129);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(108, 18);
             this.labelControl3.TabIndex = 14;
@@ -392,7 +442,7 @@
             // txbBaseDeDatos
             // 
             this.txbBaseDeDatos.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txbBaseDeDatos.Location = new System.Drawing.Point(113, 119);
+            this.txbBaseDeDatos.Location = new System.Drawing.Point(113, 153);
             this.txbBaseDeDatos.Name = "txbBaseDeDatos";
             this.txbBaseDeDatos.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbBaseDeDatos.Properties.Appearance.Options.UseFont = true;
@@ -403,7 +453,7 @@
             // 
             this.labelControl2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl2.Location = new System.Drawing.Point(113, 24);
+            this.labelControl2.Location = new System.Drawing.Point(113, 74);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(70, 18);
             this.labelControl2.TabIndex = 12;
@@ -412,12 +462,373 @@
             // txbServidor
             // 
             this.txbServidor.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txbServidor.Location = new System.Drawing.Point(113, 48);
+            this.txbServidor.Location = new System.Drawing.Point(113, 98);
             this.txbServidor.Name = "txbServidor";
             this.txbServidor.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbServidor.Properties.Appearance.Options.UseFont = true;
             this.txbServidor.Size = new System.Drawing.Size(489, 25);
             this.txbServidor.TabIndex = 13;
+            // 
+            // tabConceptosCC
+            // 
+            this.tabConceptosCC.Controls.Add(this.labelControl15);
+            this.tabConceptosCC.Controls.Add(this.labelControl14);
+            this.tabConceptosCC.Controls.Add(this.gridCheques);
+            this.tabConceptosCC.Controls.Add(this.btnGuardarConceptos);
+            this.tabConceptosCC.Controls.Add(this.labelControl11);
+            this.tabConceptosCC.Controls.Add(this.gridEfectivo);
+            this.tabConceptosCC.Name = "tabConceptosCC";
+            this.tabConceptosCC.Size = new System.Drawing.Size(714, 416);
+            this.tabConceptosCC.Text = "Conceptos CxC";
+            // 
+            // labelControl15
+            // 
+            this.labelControl15.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl15.Location = new System.Drawing.Point(364, 47);
+            this.labelControl15.Name = "labelControl15";
+            this.labelControl15.Size = new System.Drawing.Size(68, 18);
+            this.labelControl15.TabIndex = 28;
+            this.labelControl15.Text = "Cheques:";
+            // 
+            // labelControl14
+            // 
+            this.labelControl14.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl14.Location = new System.Drawing.Point(11, 47);
+            this.labelControl14.Name = "labelControl14";
+            this.labelControl14.Size = new System.Drawing.Size(66, 18);
+            this.labelControl14.TabIndex = 27;
+            this.labelControl14.Text = "Efectivo:";
+            // 
+            // gridCheques
+            // 
+            this.gridCheques.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.gridCheques.DataSource = this.seleccionConceptosCCBindingSource;
+            this.gridCheques.Location = new System.Drawing.Point(364, 71);
+            this.gridCheques.MainView = this.gvCheques;
+            this.gridCheques.Name = "gridCheques";
+            this.gridCheques.Size = new System.Drawing.Size(343, 302);
+            this.gridCheques.TabIndex = 26;
+            this.gridCheques.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvCheques});
+            // 
+            // seleccionConceptosCCBindingSource
+            // 
+            this.seleccionConceptosCCBindingSource.DataSource = typeof(CorteDeSucursales.Modelos.SeleccionConceptosCC);
+            // 
+            // gvCheques
+            // 
+            this.gvCheques.Appearance.ColumnFilterButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.gvCheques.Appearance.ColumnFilterButton.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(171)))), ((int)(((byte)(228)))));
+            this.gvCheques.Appearance.ColumnFilterButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.gvCheques.Appearance.ColumnFilterButton.ForeColor = System.Drawing.Color.Black;
+            this.gvCheques.Appearance.ColumnFilterButton.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.gvCheques.Appearance.ColumnFilterButton.Options.UseBackColor = true;
+            this.gvCheques.Appearance.ColumnFilterButton.Options.UseBorderColor = true;
+            this.gvCheques.Appearance.ColumnFilterButton.Options.UseForeColor = true;
+            this.gvCheques.Appearance.ColumnFilterButtonActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.gvCheques.Appearance.ColumnFilterButtonActive.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(190)))), ((int)(((byte)(243)))));
+            this.gvCheques.Appearance.ColumnFilterButtonActive.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.gvCheques.Appearance.ColumnFilterButtonActive.ForeColor = System.Drawing.Color.Black;
+            this.gvCheques.Appearance.ColumnFilterButtonActive.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.gvCheques.Appearance.ColumnFilterButtonActive.Options.UseBackColor = true;
+            this.gvCheques.Appearance.ColumnFilterButtonActive.Options.UseBorderColor = true;
+            this.gvCheques.Appearance.ColumnFilterButtonActive.Options.UseForeColor = true;
+            this.gvCheques.Appearance.Empty.BackColor = System.Drawing.Color.White;
+            this.gvCheques.Appearance.Empty.Options.UseBackColor = true;
+            this.gvCheques.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(242)))), ((int)(((byte)(254)))));
+            this.gvCheques.Appearance.EvenRow.ForeColor = System.Drawing.Color.Black;
+            this.gvCheques.Appearance.EvenRow.Options.UseBackColor = true;
+            this.gvCheques.Appearance.EvenRow.Options.UseForeColor = true;
+            this.gvCheques.Appearance.FilterCloseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.gvCheques.Appearance.FilterCloseButton.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(171)))), ((int)(((byte)(228)))));
+            this.gvCheques.Appearance.FilterCloseButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.gvCheques.Appearance.FilterCloseButton.ForeColor = System.Drawing.Color.Black;
+            this.gvCheques.Appearance.FilterCloseButton.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.gvCheques.Appearance.FilterCloseButton.Options.UseBackColor = true;
+            this.gvCheques.Appearance.FilterCloseButton.Options.UseBorderColor = true;
+            this.gvCheques.Appearance.FilterCloseButton.Options.UseForeColor = true;
+            this.gvCheques.Appearance.FilterPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(109)))), ((int)(((byte)(185)))));
+            this.gvCheques.Appearance.FilterPanel.ForeColor = System.Drawing.Color.White;
+            this.gvCheques.Appearance.FilterPanel.Options.UseBackColor = true;
+            this.gvCheques.Appearance.FilterPanel.Options.UseForeColor = true;
+            this.gvCheques.Appearance.FixedLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
+            this.gvCheques.Appearance.FixedLine.Options.UseBackColor = true;
+            this.gvCheques.Appearance.FocusedCell.BackColor = System.Drawing.Color.White;
+            this.gvCheques.Appearance.FocusedCell.ForeColor = System.Drawing.Color.Black;
+            this.gvCheques.Appearance.FocusedCell.Options.UseBackColor = true;
+            this.gvCheques.Appearance.FocusedCell.Options.UseForeColor = true;
+            this.gvCheques.Appearance.FocusedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(106)))), ((int)(((byte)(197)))));
+            this.gvCheques.Appearance.FocusedRow.ForeColor = System.Drawing.Color.White;
+            this.gvCheques.Appearance.FocusedRow.Options.UseBackColor = true;
+            this.gvCheques.Appearance.FocusedRow.Options.UseForeColor = true;
+            this.gvCheques.Appearance.FooterPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.gvCheques.Appearance.FooterPanel.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(171)))), ((int)(((byte)(228)))));
+            this.gvCheques.Appearance.FooterPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.gvCheques.Appearance.FooterPanel.ForeColor = System.Drawing.Color.Black;
+            this.gvCheques.Appearance.FooterPanel.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.gvCheques.Appearance.FooterPanel.Options.UseBackColor = true;
+            this.gvCheques.Appearance.FooterPanel.Options.UseBorderColor = true;
+            this.gvCheques.Appearance.FooterPanel.Options.UseForeColor = true;
+            this.gvCheques.Appearance.GroupButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(216)))), ((int)(((byte)(247)))));
+            this.gvCheques.Appearance.GroupButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(216)))), ((int)(((byte)(247)))));
+            this.gvCheques.Appearance.GroupButton.ForeColor = System.Drawing.Color.Black;
+            this.gvCheques.Appearance.GroupButton.Options.UseBackColor = true;
+            this.gvCheques.Appearance.GroupButton.Options.UseBorderColor = true;
+            this.gvCheques.Appearance.GroupButton.Options.UseForeColor = true;
+            this.gvCheques.Appearance.GroupFooter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(216)))), ((int)(((byte)(247)))));
+            this.gvCheques.Appearance.GroupFooter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(216)))), ((int)(((byte)(247)))));
+            this.gvCheques.Appearance.GroupFooter.ForeColor = System.Drawing.Color.Black;
+            this.gvCheques.Appearance.GroupFooter.Options.UseBackColor = true;
+            this.gvCheques.Appearance.GroupFooter.Options.UseBorderColor = true;
+            this.gvCheques.Appearance.GroupFooter.Options.UseForeColor = true;
+            this.gvCheques.Appearance.GroupPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(109)))), ((int)(((byte)(185)))));
+            this.gvCheques.Appearance.GroupPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.gvCheques.Appearance.GroupPanel.Options.UseBackColor = true;
+            this.gvCheques.Appearance.GroupPanel.Options.UseForeColor = true;
+            this.gvCheques.Appearance.GroupRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(216)))), ((int)(((byte)(247)))));
+            this.gvCheques.Appearance.GroupRow.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(216)))), ((int)(((byte)(247)))));
+            this.gvCheques.Appearance.GroupRow.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.gvCheques.Appearance.GroupRow.ForeColor = System.Drawing.Color.Black;
+            this.gvCheques.Appearance.GroupRow.Options.UseBackColor = true;
+            this.gvCheques.Appearance.GroupRow.Options.UseBorderColor = true;
+            this.gvCheques.Appearance.GroupRow.Options.UseFont = true;
+            this.gvCheques.Appearance.GroupRow.Options.UseForeColor = true;
+            this.gvCheques.Appearance.HeaderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.gvCheques.Appearance.HeaderPanel.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(171)))), ((int)(((byte)(228)))));
+            this.gvCheques.Appearance.HeaderPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.gvCheques.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.Black;
+            this.gvCheques.Appearance.HeaderPanel.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.gvCheques.Appearance.HeaderPanel.Options.UseBackColor = true;
+            this.gvCheques.Appearance.HeaderPanel.Options.UseBorderColor = true;
+            this.gvCheques.Appearance.HeaderPanel.Options.UseForeColor = true;
+            this.gvCheques.Appearance.HideSelectionRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(153)))), ((int)(((byte)(228)))));
+            this.gvCheques.Appearance.HideSelectionRow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(224)))), ((int)(((byte)(251)))));
+            this.gvCheques.Appearance.HideSelectionRow.Options.UseBackColor = true;
+            this.gvCheques.Appearance.HideSelectionRow.Options.UseForeColor = true;
+            this.gvCheques.Appearance.HorzLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(127)))), ((int)(((byte)(196)))));
+            this.gvCheques.Appearance.HorzLine.Options.UseBackColor = true;
+            this.gvCheques.Appearance.OddRow.BackColor = System.Drawing.Color.White;
+            this.gvCheques.Appearance.OddRow.ForeColor = System.Drawing.Color.Black;
+            this.gvCheques.Appearance.OddRow.Options.UseBackColor = true;
+            this.gvCheques.Appearance.OddRow.Options.UseForeColor = true;
+            this.gvCheques.Appearance.Preview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(252)))), ((int)(((byte)(255)))));
+            this.gvCheques.Appearance.Preview.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(129)))), ((int)(((byte)(185)))));
+            this.gvCheques.Appearance.Preview.Options.UseBackColor = true;
+            this.gvCheques.Appearance.Preview.Options.UseForeColor = true;
+            this.gvCheques.Appearance.Row.BackColor = System.Drawing.Color.White;
+            this.gvCheques.Appearance.Row.ForeColor = System.Drawing.Color.Black;
+            this.gvCheques.Appearance.Row.Options.UseBackColor = true;
+            this.gvCheques.Appearance.Row.Options.UseForeColor = true;
+            this.gvCheques.Appearance.RowSeparator.BackColor = System.Drawing.Color.White;
+            this.gvCheques.Appearance.RowSeparator.Options.UseBackColor = true;
+            this.gvCheques.Appearance.SelectedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(126)))), ((int)(((byte)(217)))));
+            this.gvCheques.Appearance.SelectedRow.ForeColor = System.Drawing.Color.White;
+            this.gvCheques.Appearance.SelectedRow.Options.UseBackColor = true;
+            this.gvCheques.Appearance.SelectedRow.Options.UseForeColor = true;
+            this.gvCheques.Appearance.VertLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(127)))), ((int)(((byte)(196)))));
+            this.gvCheques.Appearance.VertLine.Options.UseBackColor = true;
+            this.gvCheques.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn3});
+            this.gvCheques.GridControl = this.gridCheques;
+            this.gvCheques.Name = "gvCheques";
+            this.gvCheques.OptionsView.EnableAppearanceEvenRow = true;
+            this.gvCheques.OptionsView.EnableAppearanceOddRow = true;
+            this.gvCheques.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn1.FieldName = "Seleccionado";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "Concepto";
+            this.gridColumn3.FieldName = "Concepto.sConcepto";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.OptionsColumn.AllowEdit = false;
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 1;
+            // 
+            // btnGuardarConceptos
+            // 
+            this.btnGuardarConceptos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnGuardarConceptos.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarConceptos.Appearance.Options.UseFont = true;
+            this.btnGuardarConceptos.Location = new System.Drawing.Point(317, 379);
+            this.btnGuardarConceptos.Name = "btnGuardarConceptos";
+            this.btnGuardarConceptos.Size = new System.Drawing.Size(80, 30);
+            this.btnGuardarConceptos.TabIndex = 23;
+            this.btnGuardarConceptos.Text = "Guardar";
+            this.btnGuardarConceptos.Click += new System.EventHandler(this.btnGuardarConceptos_Click);
+            // 
+            // labelControl11
+            // 
+            this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl11.Location = new System.Drawing.Point(11, 23);
+            this.labelControl11.Name = "labelControl11";
+            this.labelControl11.Size = new System.Drawing.Size(516, 18);
+            this.labelControl11.TabIndex = 13;
+            this.labelControl11.Text = "Seleccione los conceptos de Cuentas Por Cobrar a utilizar en el corte:";
+            // 
+            // gridEfectivo
+            // 
+            this.gridEfectivo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.gridEfectivo.DataSource = this.seleccionConceptosCCBindingSource;
+            this.gridEfectivo.Location = new System.Drawing.Point(11, 71);
+            this.gridEfectivo.MainView = this.gvEfectivo;
+            this.gridEfectivo.Name = "gridEfectivo";
+            this.gridEfectivo.Size = new System.Drawing.Size(343, 302);
+            this.gridEfectivo.TabIndex = 0;
+            this.gridEfectivo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvEfectivo});
+            // 
+            // gvEfectivo
+            // 
+            this.gvEfectivo.Appearance.ColumnFilterButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.gvEfectivo.Appearance.ColumnFilterButton.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(171)))), ((int)(((byte)(228)))));
+            this.gvEfectivo.Appearance.ColumnFilterButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.gvEfectivo.Appearance.ColumnFilterButton.ForeColor = System.Drawing.Color.Black;
+            this.gvEfectivo.Appearance.ColumnFilterButton.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.gvEfectivo.Appearance.ColumnFilterButton.Options.UseBackColor = true;
+            this.gvEfectivo.Appearance.ColumnFilterButton.Options.UseBorderColor = true;
+            this.gvEfectivo.Appearance.ColumnFilterButton.Options.UseForeColor = true;
+            this.gvEfectivo.Appearance.ColumnFilterButtonActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.gvEfectivo.Appearance.ColumnFilterButtonActive.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(190)))), ((int)(((byte)(243)))));
+            this.gvEfectivo.Appearance.ColumnFilterButtonActive.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.gvEfectivo.Appearance.ColumnFilterButtonActive.ForeColor = System.Drawing.Color.Black;
+            this.gvEfectivo.Appearance.ColumnFilterButtonActive.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.gvEfectivo.Appearance.ColumnFilterButtonActive.Options.UseBackColor = true;
+            this.gvEfectivo.Appearance.ColumnFilterButtonActive.Options.UseBorderColor = true;
+            this.gvEfectivo.Appearance.ColumnFilterButtonActive.Options.UseForeColor = true;
+            this.gvEfectivo.Appearance.Empty.BackColor = System.Drawing.Color.White;
+            this.gvEfectivo.Appearance.Empty.Options.UseBackColor = true;
+            this.gvEfectivo.Appearance.EvenRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(242)))), ((int)(((byte)(254)))));
+            this.gvEfectivo.Appearance.EvenRow.ForeColor = System.Drawing.Color.Black;
+            this.gvEfectivo.Appearance.EvenRow.Options.UseBackColor = true;
+            this.gvEfectivo.Appearance.EvenRow.Options.UseForeColor = true;
+            this.gvEfectivo.Appearance.FilterCloseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.gvEfectivo.Appearance.FilterCloseButton.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(171)))), ((int)(((byte)(228)))));
+            this.gvEfectivo.Appearance.FilterCloseButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.gvEfectivo.Appearance.FilterCloseButton.ForeColor = System.Drawing.Color.Black;
+            this.gvEfectivo.Appearance.FilterCloseButton.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.gvEfectivo.Appearance.FilterCloseButton.Options.UseBackColor = true;
+            this.gvEfectivo.Appearance.FilterCloseButton.Options.UseBorderColor = true;
+            this.gvEfectivo.Appearance.FilterCloseButton.Options.UseForeColor = true;
+            this.gvEfectivo.Appearance.FilterPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(109)))), ((int)(((byte)(185)))));
+            this.gvEfectivo.Appearance.FilterPanel.ForeColor = System.Drawing.Color.White;
+            this.gvEfectivo.Appearance.FilterPanel.Options.UseBackColor = true;
+            this.gvEfectivo.Appearance.FilterPanel.Options.UseForeColor = true;
+            this.gvEfectivo.Appearance.FixedLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
+            this.gvEfectivo.Appearance.FixedLine.Options.UseBackColor = true;
+            this.gvEfectivo.Appearance.FocusedCell.BackColor = System.Drawing.Color.White;
+            this.gvEfectivo.Appearance.FocusedCell.ForeColor = System.Drawing.Color.Black;
+            this.gvEfectivo.Appearance.FocusedCell.Options.UseBackColor = true;
+            this.gvEfectivo.Appearance.FocusedCell.Options.UseForeColor = true;
+            this.gvEfectivo.Appearance.FocusedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(106)))), ((int)(((byte)(197)))));
+            this.gvEfectivo.Appearance.FocusedRow.ForeColor = System.Drawing.Color.White;
+            this.gvEfectivo.Appearance.FocusedRow.Options.UseBackColor = true;
+            this.gvEfectivo.Appearance.FocusedRow.Options.UseForeColor = true;
+            this.gvEfectivo.Appearance.FooterPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.gvEfectivo.Appearance.FooterPanel.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(171)))), ((int)(((byte)(228)))));
+            this.gvEfectivo.Appearance.FooterPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.gvEfectivo.Appearance.FooterPanel.ForeColor = System.Drawing.Color.Black;
+            this.gvEfectivo.Appearance.FooterPanel.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.gvEfectivo.Appearance.FooterPanel.Options.UseBackColor = true;
+            this.gvEfectivo.Appearance.FooterPanel.Options.UseBorderColor = true;
+            this.gvEfectivo.Appearance.FooterPanel.Options.UseForeColor = true;
+            this.gvEfectivo.Appearance.GroupButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(216)))), ((int)(((byte)(247)))));
+            this.gvEfectivo.Appearance.GroupButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(216)))), ((int)(((byte)(247)))));
+            this.gvEfectivo.Appearance.GroupButton.ForeColor = System.Drawing.Color.Black;
+            this.gvEfectivo.Appearance.GroupButton.Options.UseBackColor = true;
+            this.gvEfectivo.Appearance.GroupButton.Options.UseBorderColor = true;
+            this.gvEfectivo.Appearance.GroupButton.Options.UseForeColor = true;
+            this.gvEfectivo.Appearance.GroupFooter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(216)))), ((int)(((byte)(247)))));
+            this.gvEfectivo.Appearance.GroupFooter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(216)))), ((int)(((byte)(247)))));
+            this.gvEfectivo.Appearance.GroupFooter.ForeColor = System.Drawing.Color.Black;
+            this.gvEfectivo.Appearance.GroupFooter.Options.UseBackColor = true;
+            this.gvEfectivo.Appearance.GroupFooter.Options.UseBorderColor = true;
+            this.gvEfectivo.Appearance.GroupFooter.Options.UseForeColor = true;
+            this.gvEfectivo.Appearance.GroupPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(109)))), ((int)(((byte)(185)))));
+            this.gvEfectivo.Appearance.GroupPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.gvEfectivo.Appearance.GroupPanel.Options.UseBackColor = true;
+            this.gvEfectivo.Appearance.GroupPanel.Options.UseForeColor = true;
+            this.gvEfectivo.Appearance.GroupRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(216)))), ((int)(((byte)(247)))));
+            this.gvEfectivo.Appearance.GroupRow.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(216)))), ((int)(((byte)(247)))));
+            this.gvEfectivo.Appearance.GroupRow.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.gvEfectivo.Appearance.GroupRow.ForeColor = System.Drawing.Color.Black;
+            this.gvEfectivo.Appearance.GroupRow.Options.UseBackColor = true;
+            this.gvEfectivo.Appearance.GroupRow.Options.UseBorderColor = true;
+            this.gvEfectivo.Appearance.GroupRow.Options.UseFont = true;
+            this.gvEfectivo.Appearance.GroupRow.Options.UseForeColor = true;
+            this.gvEfectivo.Appearance.HeaderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.gvEfectivo.Appearance.HeaderPanel.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(171)))), ((int)(((byte)(228)))));
+            this.gvEfectivo.Appearance.HeaderPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.gvEfectivo.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.Black;
+            this.gvEfectivo.Appearance.HeaderPanel.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.gvEfectivo.Appearance.HeaderPanel.Options.UseBackColor = true;
+            this.gvEfectivo.Appearance.HeaderPanel.Options.UseBorderColor = true;
+            this.gvEfectivo.Appearance.HeaderPanel.Options.UseForeColor = true;
+            this.gvEfectivo.Appearance.HideSelectionRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(153)))), ((int)(((byte)(228)))));
+            this.gvEfectivo.Appearance.HideSelectionRow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(224)))), ((int)(((byte)(251)))));
+            this.gvEfectivo.Appearance.HideSelectionRow.Options.UseBackColor = true;
+            this.gvEfectivo.Appearance.HideSelectionRow.Options.UseForeColor = true;
+            this.gvEfectivo.Appearance.HorzLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(127)))), ((int)(((byte)(196)))));
+            this.gvEfectivo.Appearance.HorzLine.Options.UseBackColor = true;
+            this.gvEfectivo.Appearance.OddRow.BackColor = System.Drawing.Color.White;
+            this.gvEfectivo.Appearance.OddRow.ForeColor = System.Drawing.Color.Black;
+            this.gvEfectivo.Appearance.OddRow.Options.UseBackColor = true;
+            this.gvEfectivo.Appearance.OddRow.Options.UseForeColor = true;
+            this.gvEfectivo.Appearance.Preview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(252)))), ((int)(((byte)(255)))));
+            this.gvEfectivo.Appearance.Preview.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(129)))), ((int)(((byte)(185)))));
+            this.gvEfectivo.Appearance.Preview.Options.UseBackColor = true;
+            this.gvEfectivo.Appearance.Preview.Options.UseForeColor = true;
+            this.gvEfectivo.Appearance.Row.BackColor = System.Drawing.Color.White;
+            this.gvEfectivo.Appearance.Row.ForeColor = System.Drawing.Color.Black;
+            this.gvEfectivo.Appearance.Row.Options.UseBackColor = true;
+            this.gvEfectivo.Appearance.Row.Options.UseForeColor = true;
+            this.gvEfectivo.Appearance.RowSeparator.BackColor = System.Drawing.Color.White;
+            this.gvEfectivo.Appearance.RowSeparator.Options.UseBackColor = true;
+            this.gvEfectivo.Appearance.SelectedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(126)))), ((int)(((byte)(217)))));
+            this.gvEfectivo.Appearance.SelectedRow.ForeColor = System.Drawing.Color.White;
+            this.gvEfectivo.Appearance.SelectedRow.Options.UseBackColor = true;
+            this.gvEfectivo.Appearance.SelectedRow.Options.UseForeColor = true;
+            this.gvEfectivo.Appearance.VertLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(127)))), ((int)(((byte)(196)))));
+            this.gvEfectivo.Appearance.VertLine.Options.UseBackColor = true;
+            this.gvEfectivo.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colSeleccionado,
+            this.colConcepto});
+            this.gvEfectivo.GridControl = this.gridEfectivo;
+            this.gvEfectivo.Name = "gvEfectivo";
+            this.gvEfectivo.OptionsView.EnableAppearanceEvenRow = true;
+            this.gvEfectivo.OptionsView.EnableAppearanceOddRow = true;
+            this.gvEfectivo.OptionsView.ShowGroupPanel = false;
+            // 
+            // colSeleccionado
+            // 
+            this.colSeleccionado.AppearanceHeader.Options.UseTextOptions = true;
+            this.colSeleccionado.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colSeleccionado.FieldName = "Seleccionado";
+            this.colSeleccionado.Name = "colSeleccionado";
+            this.colSeleccionado.Visible = true;
+            this.colSeleccionado.VisibleIndex = 0;
+            // 
+            // colConcepto
+            // 
+            this.colConcepto.Caption = "Concepto";
+            this.colConcepto.FieldName = "Concepto.sConcepto";
+            this.colConcepto.Name = "colConcepto";
+            this.colConcepto.OptionsColumn.AllowEdit = false;
+            this.colConcepto.Visible = true;
+            this.colConcepto.VisibleIndex = 1;
+            // 
+            // conceptosCCBindingSource
+            // 
+            this.conceptosCCBindingSource.DataSource = typeof(CorteDeSucursales.Modelos.ConceptosCC);
             // 
             // labelControl1
             // 
@@ -456,6 +867,7 @@
             this.ClientSize = new System.Drawing.Size(720, 517);
             this.Controls.Add(this.tbControl);
             this.Controls.Add(this.pnlTitulo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmConfigurar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Carnicería Los Corrales - Corte de Sucursal - Configurar";
@@ -475,11 +887,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.lbUsuarios)).EndInit();
             this.tabMicrosip.ResumeLayout(false);
             this.tabMicrosip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txbSucursal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbPuerto.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbContraseña.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbUsuario.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbBaseDeDatos.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbServidor.Properties)).EndInit();
+            this.tabConceptosCC.ResumeLayout(false);
+            this.tabConceptosCC.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridCheques)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seleccionConceptosCCBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvCheques)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridEfectivo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvEfectivo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.conceptosCCBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlTitulo)).EndInit();
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
@@ -521,5 +942,22 @@
         private DevExpress.XtraEditors.SimpleButton btnModificarUsuario;
         private DevExpress.XtraEditors.SimpleButton btnNuevoUsuario;
         private DevExpress.XtraEditors.SimpleButton btnEliminarUsuario;
+        private DevExpress.XtraTab.XtraTabPage tabConceptosCC;
+        private DevExpress.XtraEditors.LabelControl labelControl11;
+        private DevExpress.XtraGrid.GridControl gridEfectivo;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvEfectivo;
+        private System.Windows.Forms.BindingSource seleccionConceptosCCBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colSeleccionado;
+        private DevExpress.XtraGrid.Columns.GridColumn colConcepto;
+        private DevExpress.XtraEditors.SimpleButton btnGuardarConceptos;
+        private DevExpress.XtraEditors.LabelControl labelControl12;
+        private DevExpress.XtraEditors.TextEdit txbSucursal;
+        private System.Windows.Forms.BindingSource conceptosCCBindingSource;
+        private DevExpress.XtraEditors.LabelControl labelControl15;
+        private DevExpress.XtraEditors.LabelControl labelControl14;
+        private DevExpress.XtraGrid.GridControl gridCheques;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvCheques;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
     }
 }

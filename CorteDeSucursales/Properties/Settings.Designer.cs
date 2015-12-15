@@ -44,5 +44,39 @@ namespace CorteDeSucursales.Properties {
                 this["ConfigUsuarios"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Collections.Specialized.StringCollection ConceptosEfectivo {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["ConceptosEfectivo"]));
+            }
+            set {
+                this["ConceptosEfectivo"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Collections.Specialized.StringCollection ConceptosCheques {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["ConceptosCheques"]));
+            }
+            set {
+                this["ConceptosCheques"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Sucursal {
+            get {
+                return ((string)(this["Sucursal"]));
+            }
+            set {
+                this["Sucursal"] = value;
+            }
+        }
     }
 }

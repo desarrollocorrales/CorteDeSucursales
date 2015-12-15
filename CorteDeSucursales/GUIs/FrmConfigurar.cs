@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using CorteDeSucursales.DAL;
+using CorteDeSucursales.Modelos;
 using DevExpress.XtraEditors;
-using System.Linq;
 
 namespace CorteDeSucursales.GUIs
 {
@@ -22,7 +21,8 @@ namespace CorteDeSucursales.GUIs
 
         private void FrmConfigurar_Load(object sender, EventArgs e)
         {
-            InicializarConfiguraciones();            
+            InicializarConfiguraciones();
+            llenarGridConceptos();
         }
         private void InicializarConfiguraciones()
         {
@@ -39,6 +39,7 @@ namespace CorteDeSucursales.GUIs
                 txbUsuario.Text = Microsip.sUsuario;
                 txbContraseña.Text = Microsip.sContraseña;
                 txbPuerto.Text = Microsip.iPuerto.ToString();
+                txbSucursal.Text = Properties.Settings.Default.Sucursal;
             }
             
             // Inicializar Usuarios
@@ -56,6 +57,38 @@ namespace CorteDeSucursales.GUIs
                 lbUsuarios.DisplayMember = "sNombreUsuario";
             }
         }
+        private void llenarGridConceptos()
+        {
+            try
+            {
+                FBDAL dal = new FBDAL();
+                var lstConceptos = dal.ObtenerConceptosCC();
+                List<SeleccionConceptosCC> lstConceptosEfectivo = new List<SeleccionConceptosCC>();
+                List<SeleccionConceptosCC> lstConceptosCheques = new List<SeleccionConceptosCC>();
+
+                foreach (ConceptosCC concepto in lstConceptos)
+                {
+                    SeleccionConceptosCC ConceptoEfectivo = new SeleccionConceptosCC();
+                    ConceptoEfectivo.Concepto = concepto;
+
+                    SeleccionConceptosCC ConceptoCheques = new SeleccionConceptosCC();
+                    ConceptoCheques.Concepto = concepto;
+
+                    lstConceptosEfectivo.Add(ConceptoEfectivo);
+                    lstConceptosCheques.Add(ConceptoCheques);
+                }
+
+                gridEfectivo.DataSource = lstConceptosEfectivo;
+                gvEfectivo.BestFitColumns();
+
+                gridCheques.DataSource = lstConceptosCheques;
+                gvCheques.BestFitColumns();
+            }
+            catch 
+            { 
+
+            }
+        }
 
         private void btnGuardarMicrosip_Click(object sender, EventArgs e)
         {
@@ -71,7 +104,10 @@ namespace CorteDeSucursales.GUIs
             Microsip.sContraseña = txbContraseña.Text;
             Microsip.iPuerto = Convert.ToInt32(txbPuerto.Text);
 
+            Properties.Settings.Default.Sucursal = txbSucursal.Text;
             Properties.Settings.Default.Save();
+
+            MessageBox.Show("Los datos han sido guardados con exito!!!", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnGuardarUsuario_Click(object sender, EventArgs e)
@@ -181,15 +217,18 @@ namespace CorteDeSucursales.GUIs
 
             usuarioSeleccionado = (ModelosDeConfiguracion.Usuario)lbUsuarios.SelectedItem;
 
-            HabilitarDeshabilitarControles(true);
+            if (usuarioSeleccionado != null)
+            {
+                HabilitarDeshabilitarControles(true);
 
-            txbNombreCompleto.Text = usuarioSeleccionado.sNombreCompleto;
-            txbNombreUsuario.Text = usuarioSeleccionado.sNombreUsuario;           
-            txbContraseña1.Text = usuarioSeleccionado.sContraseña;
-            txbContraseña2.Text = usuarioSeleccionado.sContraseña;
+                txbNombreCompleto.Text = usuarioSeleccionado.sNombreCompleto;
+                txbNombreUsuario.Text = usuarioSeleccionado.sNombreUsuario;
+                txbContraseña1.Text = usuarioSeleccionado.sContraseña;
+                txbContraseña2.Text = usuarioSeleccionado.sContraseña;
 
-            btnEliminarUsuario.Visible = true;
-            btnGuardarUsuario.Enabled = true;
+                btnEliminarUsuario.Visible = true;
+                btnGuardarUsuario.Enabled = true;
+            }
         }
 
         private void btnEliminarUsuario_Click(object sender, EventArgs e)
@@ -213,6 +252,30 @@ namespace CorteDeSucursales.GUIs
                 btnGuardarUsuario.Enabled = false;
                 btnEliminarUsuario.Visible = false;
             }
+        }
+
+        private void btnGuardarConceptos_Click(object sender, EventArgs e)
+        {
+            //Obtener los conceptos seleccionados.
+            var lstEfectivoSeleccionados = ((List<SeleccionConceptosCC>)gridEfectivo.DataSource).FindAll(o => o.Seleccionado == true);
+            var lstChequesSeleccionaodos = ((List<SeleccionConceptosCC>)gridCheques.DataSource).FindAll(o => o.Seleccionado == true);
+
+            StringBuilder sbConceptos = new StringBuilder();
+
+            Properties.Settings.Default.ConceptosEfectivo = new System.Collections.Specialized.StringCollection();
+            Properties.Settings.Default.ConceptosCheques  = new System.Collections.Specialized.StringCollection();
+            foreach (SeleccionConceptosCC concepto in lstEfectivoSeleccionados)
+            {
+                Properties.Settings.Default.ConceptosEfectivo.Add(concepto.Concepto.iID.ToString());
+            }
+            foreach (SeleccionConceptosCC concepto in lstChequesSeleccionaodos)
+            {
+                Properties.Settings.Default.ConceptosCheques.Add(concepto.Concepto.iID.ToString());
+            }
+
+            Properties.Settings.Default.Save();
+
+            MessageBox.Show("Los conceptos fueron guardados con exito!!!");
         }
     }
 }

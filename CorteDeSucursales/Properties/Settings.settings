@@ -8,5 +8,14 @@
     <Setting Name="ConfigUsuarios" Type="ModelosDeConfiguracion.ListaDeUsuarios" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="ConceptosEfectivo" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ConceptosCheques" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Sucursal" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorteDeSucursales", "CorteD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelosDeConfiguracion", "..\ModelosDeConfiguracion\ModelosDeConfiguracion.csproj", "{E9B4C00D-97D9-4BB7-A7BA-8555027C2BE6}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "CorteInstaller", "..\CorteInstaller\CorteInstaller.vdproj", "{2BC6C9AC-AD31-40B6-8B7C-5A934FA953EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,12 @@ Global
 		{E9B4C00D-97D9-4BB7-A7BA-8555027C2BE6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{E9B4C00D-97D9-4BB7-A7BA-8555027C2BE6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{E9B4C00D-97D9-4BB7-A7BA-8555027C2BE6}.Release|x86.ActiveCfg = Release|Any CPU
+		{2BC6C9AC-AD31-40B6-8B7C-5A934FA953EE}.Debug|Any CPU.ActiveCfg = Debug
+		{2BC6C9AC-AD31-40B6-8B7C-5A934FA953EE}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{2BC6C9AC-AD31-40B6-8B7C-5A934FA953EE}.Debug|x86.ActiveCfg = Debug
+		{2BC6C9AC-AD31-40B6-8B7C-5A934FA953EE}.Release|Any CPU.ActiveCfg = Release
+		{2BC6C9AC-AD31-40B6-8B7C-5A934FA953EE}.Release|Mixed Platforms.ActiveCfg = Release
+		{2BC6C9AC-AD31-40B6-8B7C-5A934FA953EE}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

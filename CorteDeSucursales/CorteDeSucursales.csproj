@@ -11,7 +11,8 @@
     <RootNamespace>CorteDeSucursales</RootNamespace>
     <AssemblyName>CorteDeSucursales</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -33,13 +34,30 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>CorteDeSucursales.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>CorteSucursales.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Data.v11.1, Version=11.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v11.1, Version=11.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v11.1, Version=11.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v11.1, Version=11.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v11.1, Version=11.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v11.1, Version=11.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="FirebirdSql.Data.FirebirdClient, Version=4.5.0.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL">
+      <HintPath>packages\FirebirdSql.Data.FirebirdClient.4.5.0.0\lib\net40-client\FirebirdSql.Data.FirebirdClient.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,11 +68,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\FBDAL.cs" />
+    <Compile Include="GUIs\FrmAnalisisCorte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIs\FrmAnalisisCorte.Designer.cs">
+      <DependentUpon>FrmAnalisisCorte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIs\FrmCaptura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIs\FrmCaptura.Designer.cs">
+      <DependentUpon>FrmCaptura.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUIs\FrmConfigurar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUIs\FrmConfigurar.Designer.cs">
       <DependentUpon>FrmConfigurar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIs\FrmDetallesCxCIngresos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIs\FrmDetallesCxCIngresos.Designer.cs">
+      <DependentUpon>FrmDetallesCxCIngresos.cs</DependentUpon>
     </Compile>
     <Compile Include="GUIs\FrmLogin.cs">
       <SubType>Form</SubType>
@@ -62,10 +99,29 @@
     <Compile Include="GUIs\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modelos\Cajas.cs" />
+    <Compile Include="Modelos\ConceptosCC.cs" />
+    <Compile Include="Modelos\DoctosCC.cs" />
+    <Compile Include="Modelos\DoctosPV.cs" />
+    <Compile Include="Modelos\DoctosVE.cs" />
+    <Compile Include="Modelos\Logger.cs" />
+    <Compile Include="Modelos\PuntoDeVenta.cs" />
+    <Compile Include="Modelos\SeleccionConceptosCC.cs" />
+    <Compile Include="Modelos\TipoDeTotal.cs" />
+    <Compile Include="Modelos\Total.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUIs\FrmAnalisisCorte.resx">
+      <DependentUpon>FrmAnalisisCorte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIs\FrmCaptura.resx">
+      <DependentUpon>FrmCaptura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUIs\FrmConfigurar.resx">
       <DependentUpon>FrmConfigurar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIs\FrmDetallesCxCIngresos.resx">
+      <DependentUpon>FrmDetallesCxCIngresos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUIs\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
@@ -79,8 +135,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\CorteDeSucursales.Modelos.ConceptosCC.datasource" />
+    <None Include="Properties\DataSources\CorteDeSucursales.Modelos.DoctosCC.datasource" />
+    <None Include="Properties\DataSources\CorteDeSucursales.Modelos.DoctosPV.datasource" />
+    <None Include="Properties\DataSources\CorteDeSucursales.Modelos.DoctosVE.datasource" />
+    <None Include="Properties\DataSources\CorteDeSucursales.Modelos.PuntoDeVenta.datasource" />
+    <None Include="Properties\DataSources\CorteDeSucursales.Modelos.SeleccionConceptosCC.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -91,11 +155,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Entity\" />
-    <Folder Include="Modelos\" />
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="CorteSucursales.ico" />
+    <Content Include="Logs\borrame.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Recursos\LOGOCORRALES.GIF" />
   </ItemGroup>
   <ItemGroup>

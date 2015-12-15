@@ -34,7 +34,7 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txbContraseña = new DevExpress.XtraEditors.TextEdit();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnEntrar = new DevExpress.XtraEditors.SimpleButton();
             this.btnConfigurar = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txbUsuario.Properties)).BeginInit();
@@ -54,6 +54,7 @@
             // 
             // txbUsuario
             // 
+            this.txbUsuario.EditValue = "";
             this.txbUsuario.Location = new System.Drawing.Point(108, 174);
             this.txbUsuario.Name = "txbUsuario";
             this.txbUsuario.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -81,22 +82,25 @@
             // 
             // txbContraseña
             // 
+            this.txbContraseña.EditValue = "";
             this.txbContraseña.Location = new System.Drawing.Point(108, 205);
             this.txbContraseña.Name = "txbContraseña";
             this.txbContraseña.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbContraseña.Properties.Appearance.Options.UseFont = true;
+            this.txbContraseña.Properties.PasswordChar = '*';
             this.txbContraseña.Size = new System.Drawing.Size(333, 25);
             this.txbContraseña.TabIndex = 4;
             // 
-            // simpleButton1
+            // btnEntrar
             // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Location = new System.Drawing.Point(192, 236);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(80, 30);
-            this.simpleButton1.TabIndex = 6;
-            this.simpleButton1.Text = "Entrar";
+            this.btnEntrar.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntrar.Appearance.Options.UseFont = true;
+            this.btnEntrar.Location = new System.Drawing.Point(192, 236);
+            this.btnEntrar.Name = "btnEntrar";
+            this.btnEntrar.Size = new System.Drawing.Size(80, 30);
+            this.btnEntrar.TabIndex = 6;
+            this.btnEntrar.Text = "Entrar";
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // btnConfigurar
             // 
@@ -119,11 +123,12 @@
             this.ClientSize = new System.Drawing.Size(464, 302);
             this.Controls.Add(this.pictureEdit1);
             this.Controls.Add(this.btnConfigurar);
-            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.txbContraseña);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.txbUsuario);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximumSize = new System.Drawing.Size(480, 340);
             this.MinimumSize = new System.Drawing.Size(480, 340);
@@ -145,7 +150,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.TextEdit txbContraseña;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnEntrar;
         private DevExpress.XtraEditors.SimpleButton btnConfigurar;
     }
 }

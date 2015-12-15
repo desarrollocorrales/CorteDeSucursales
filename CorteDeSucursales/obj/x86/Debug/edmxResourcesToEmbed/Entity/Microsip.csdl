@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="MicrosipEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CAJAS" EntityType="Model.CAJAS" />
+    <EntitySet Name="DOCTOS_PV" EntityType="Model.DOCTOS_PV" />
+    <EntitySet Name="MOVTOS_CAJAS" EntityType="Model.MOVTOS_CAJAS" />
+    <AssociationSet Name="CAJAS_A_DOCTOS_PV" Association="Model.CAJAS_A_DOCTOS_PV">
+      <End Role="CAJAS" EntitySet="CAJAS" />
+      <End Role="DOCTOS_PV" EntitySet="DOCTOS_PV" />
+    </AssociationSet>
+    <AssociationSet Name="CAJAS_A_MOVTOS_CAJAS" Association="Model.CAJAS_A_MOVTOS_CAJAS">
+      <End Role="CAJAS" EntitySet="CAJAS" />
+      <End Role="MOVTOS_CAJAS" EntitySet="MOVTOS_CAJAS" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CAJAS">
+    <Key>
+      <PropertyRef Name="CAJA_ID" />
+    </Key>
+    <Property Name="CAJA_ID" Type="Int32" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ALMACEN_ID" Type="Int32" Nullable="false" />
+    <Property Name="MODIFICAR_ALMACEN" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="true" />
+    <Property Name="VENTAS_DESDE" Type="String" MaxLength="1" Unicode="true" FixedLength="true" />
+    <Property Name="PERMITE_COBRAR" Type="String" MaxLength="1" Unicode="true" FixedLength="true" />
+    <Property Name="PAUSA_TERMINAR_VENTA" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="true" />
+    <Property Name="FORMA_COBRO_PREDET_ID" Type="Int32" />
+    <Property Name="IMAGENES_CAJA_ID" Type="Int32" />
+    <Property Name="MANEJAR_VENDEDORES" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="true" />
+    <Property Name="USUARIO_CREADOR" Type="String" MaxLength="31" Unicode="true" FixedLength="false" />
+    <Property Name="FECHA_HORA_CREACION" Type="DateTime" />
+    <Property Name="USUARIO_AUT_CREACION" Type="String" MaxLength="31" Unicode="true" FixedLength="false" />
+    <Property Name="USUARIO_ULT_MODIF" Type="String" MaxLength="31" Unicode="true" FixedLength="false" />
+    <Property Name="FECHA_HORA_ULT_MODIF" Type="DateTime" />
+    <Property Name="USUARIO_AUT_MODIF" Type="String" MaxLength="31" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="DOCTOS_PV" Relationship="Model.CAJAS_A_DOCTOS_PV" FromRole="CAJAS" ToRole="DOCTOS_PV" />
+    <NavigationProperty Name="MOVTOS_CAJAS" Relationship="Model.CAJAS_A_MOVTOS_CAJAS" FromRole="CAJAS" ToRole="MOVTOS_CAJAS" />
+  </EntityType>
+  <EntityType Name="DOCTOS_PV">
+    <Key>
+      <PropertyRef Name="DOCTO_PV_ID" />
+    </Key>
+    <Property Name="DOCTO_PV_ID" Type="Int32" Nullable="false" />
+    <Property Name="CAJA_ID" Type="Int32" Nullable="false" />
+    <Property Name="TIPO_DOCTO" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="true" />
+    <Property Name="FOLIO" Type="String" Nullable="false" MaxLength="9" Unicode="true" FixedLength="true" />
+    <Property Name="FECHA" Type="DateTime" Nullable="false" />
+    <Property Name="HORA" Type="Time" Nullable="false" />
+    <Property Name="CAJERO_ID" Type="Int32" />
+    <Property Name="CLAVE_CLIENTE" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="CLIENTE_ID" Type="Int32" />
+    <Property Name="CLAVE_CLIENTE_FAC" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="CLIENTE_FAC_ID" Type="Int32" />
+    <Property Name="DIR_CLI_ID" Type="Int32" />
+    <Property Name="ALMACEN_ID" Type="Int32" />
+    <Property Name="MONEDA_ID" Type="Int32" />
+    <Property Name="IMPUESTO_INCLUIDO" Type="String" MaxLength="1" Unicode="true" FixedLength="true" />
+    <Property Name="TIPO_CAMBIO" Type="Decimal" Nullable="false" Precision="18" Scale="6" />
+    <Property Name="TIPO_DSCTO" Type="String" MaxLength="1" Unicode="true" FixedLength="true" />
+    <Property Name="DSCTO_PCTJE" Type="Decimal" Nullable="false" Precision="9" Scale="6" />
+    <Property Name="DSCTO_IMPORTE" Type="Decimal" Nullable="false" Precision="15" Scale="2" />
+    <Property Name="ESTATUS" Type="String" MaxLength="1" Unicode="true" FixedLength="true" />
+    <Property Name="APLICADO" Type="String" MaxLength="1" Unicode="true" FixedLength="true" />
+    <Property Name="IMPORTE_NETO" Type="Decimal" Nullable="false" Precision="15" Scale="2" />
+    <Property Name="TOTAL_IMPUESTOS" Type="Decimal" Nullable="false" Precision="15" Scale="2" />
+    <Property Name="IMPORTE_DONATIVO" Type="Decimal" Nullable="false" Precision="15" Scale="2" />
+    <Property Name="TOTAL_FPGC" Type="Decimal" Nullable="false" Precision="15" Scale="2" />
+    <Property Name="TICKET_EMITIDO" Type="String" MaxLength="1" Unicode="true" FixedLength="true" />
+    <Property Name="FORMA_GLOBAL_EMITIDA" Type="String" MaxLength="1" Unicode="true" FixedLength="true" />
+    <Property Name="FORMA_EMITIDA" Type="String" MaxLength="1" Unicode="true" FixedLength="true" />
+    <Property Name="CONTABILIZADO" Type="String" MaxLength="1" Unicode="true" FixedLength="true" />
+    <Property Name="SISTEMA_ORIGEN" Type="String" Nullable="false" MaxLength="2" Unicode="true" FixedLength="true" />
+    <Property Name="VENDEDOR_ID" Type="Int32" />
+    <Property Name="CARGAR_SUN" Type="String" MaxLength="1" Unicode="true" FixedLength="true" />
+    <Property Name="PERSONA" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TIPO_GEN_FAC" Type="String" MaxLength="1" Unicode="true" FixedLength="true" />
+    <Property Name="ES_FAC_GLOBAL" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="true" />
+    <Property Name="FECHA_INI_FAC_GLOBAL" Type="DateTime" />
+    <Property Name="FECHA_FIN_FAC_GLOBAL" Type="DateTime" />
+    <Property Name="INCL_FACTURADOS_FAC_GLOBAL" Type="String" MaxLength="1" Unicode="true" FixedLength="true" />
+    <Property Name="ALMACEN_ID_FAC_GLOBAL" Type="Int32" />
+    <Property Name="REFER_RETING" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="UNID_COMPROM" Type="String" MaxLength="1" Unicode="true" FixedLength="true" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="IMPUESTO_SUSTITUIDO_ID" Type="Int32" />
+    <Property Name="IMPUESTO_SUSTITUTO_ID" Type="Int32" />
+    <Property Name="ES_CFD" Type="String" MaxLength="1" Unicode="true" FixedLength="true" />
+    <Property Name="MODALIDAD_FACTURACION" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="ENVIADO" Type="String" MaxLength="1" Unicode="true" FixedLength="true" />
+    <Property Name="EMAIL_ENVIO" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="USUARIO_CREADOR" Type="String" MaxLength="31" Unicode="true" FixedLength="false" />
+    <Property Name="CFDI_CERTIFICADO" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="true" />
+    <Property Name="FECHA_HORA_CREACION" Type="DateTime" />
+    <Property Name="USUARIO_ULT_MODIF" Type="String" MaxLength="31" Unicode="true" FixedLength="false" />
+    <Property Name="USUARIO_AUT_CREACION" Type="String" MaxLength="31" Unicode="true" FixedLength="false" />
+    <Property Name="FECHA_HORA_ULT_MODIF" Type="DateTime" />
+    <Property Name="USUARIO_CANCELACION" Type="String" MaxLength="31" Unicode="true" FixedLength="false" />
+    <Property Name="USUARIO_AUT_MODIF" Type="String" MaxLength="31" Unicode="true" FixedLength="false" />
+    <Property Name="FECHA_HORA_CANCELACION" Type="DateTime" />
+    <Property Name="FECHA_HORA_ENVIO" Type="DateTime" />
+    <Property Name="USUARIO_AUT_CANCELACION" Type="String" MaxLength="31" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="CAJAS" Relationship="Model.CAJAS_A_DOCTOS_PV" FromRole="DOCTOS_PV" ToRole="CAJAS" />
+  </EntityType>
+  <EntityType Name="MOVTOS_CAJAS">
+    <Key>
+      <PropertyRef Name="MOVTO_CAJA_ID" />
+    </Key>
+    <Property Name="MOVTO_CAJA_ID" Type="Int32" Nullable="false" />
+    <Property Name="FECHA" Type="DateTime" Nullable="false" />
+    <Property Name="HORA" Type="Time" Nullable="false" />
+    <Property Name="TIPO_MOVTO" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="true" />
+    <Property Name="CAJA_ID" Type="Int32" Nullable="false" />
+    <Property Name="CAJEROS_HABILITADOS" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="true" />
+    <Property Name="FORMA_EMITIDA" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="true" />
+    <Property Name="USUARIO_CREADOR" Type="String" MaxLength="31" Unicode="true" FixedLength="false" />
+    <Property Name="FECHA_HORA_CREACION" Type="DateTime" Nullable="false" />
+    <Property Name="USUARIO_AUT_CREACION" Type="String" MaxLength="31" Unicode="true" FixedLength="false" />
+    <Property Name="USUARIO_ULT_MODIF" Type="String" MaxLength="31" Unicode="true" FixedLength="false" />
+    <Property Name="FECHA_HORA_ULT_MODIF" Type="DateTime" />
+    <Property Name="USUARIO_AUT_MODIF" Type="String" MaxLength="31" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="CAJAS" Relationship="Model.CAJAS_A_MOVTOS_CAJAS" FromRole="MOVTOS_CAJAS" ToRole="CAJAS" />
+  </EntityType>
+  <Association Name="CAJAS_A_DOCTOS_PV">
+    <End Role="CAJAS" Type="Model.CAJAS" Multiplicity="1" />
+    <End Role="DOCTOS_PV" Type="Model.DOCTOS_PV" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAJAS">
+        <PropertyRef Name="CAJA_ID" />
+      </Principal>
+      <Dependent Role="DOCTOS_PV">
+        <PropertyRef Name="CAJA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CAJAS_A_MOVTOS_CAJAS">
+    <End Role="CAJAS" Type="Model.CAJAS" Multiplicity="1" />
+    <End Role="MOVTOS_CAJAS" Type="Model.MOVTOS_CAJAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAJAS">
+        <PropertyRef Name="CAJA_ID" />
+      </Principal>
+      <Dependent Role="MOVTOS_CAJAS">
+        <PropertyRef Name="CAJA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
