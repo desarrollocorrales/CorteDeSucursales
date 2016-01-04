@@ -408,6 +408,7 @@ namespace CorteDeSucursales.GUIs
                 //Transferencias 
                 renglon += 6; columna = 1;
                 ExcelTransferenciasInfo(excelDAL);
+                excelDAL.BorrarFilas();
                 //*************************************************************
 
                 string sHoy = hoy.ToString("ddMMyyyy");

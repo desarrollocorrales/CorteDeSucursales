@@ -74,5 +74,16 @@ namespace CorteDeSucursales.DAL
             string celda = string.Format("{0}{1}", columnas[columna], renglon);
             Hoja.Range(celda).Font.Bold = false;
         }
+        public void BorrarFilas()
+        {
+            var usedRanage = Hoja.UsedRange;
+            foreach (var r in usedRanage)
+            {
+                if (Convert.ToString(r.Value2) == "BORRAR")
+                {
+                    r.EntireRow.Delete(XlDeleteShiftDirection.xlShiftUp);
+                }
+            }
+        }
     }
 }
