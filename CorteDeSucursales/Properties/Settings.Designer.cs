@@ -78,5 +78,64 @@ namespace CorteDeSucursales.Properties {
                 this["Sucursal"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ServidorCorreo {
+            get {
+                return ((string)(this["ServidorCorreo"]));
+            }
+            set {
+                this["ServidorCorreo"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string CorreoEnvio {
+            get {
+                return ((string)(this["CorreoEnvio"]));
+            }
+            set {
+                this["CorreoEnvio"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ContraseniaCorreo {
+            get {
+                return ((string)(this["ContraseniaCorreo"]));
+            }
+            set {
+                this["ContraseniaCorreo"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string PuertoCorreo {
+            get {
+                return ((string)(this["PuertoCorreo"]));
+            }
+            set {
+                this["PuertoCorreo"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Collections.Specialized.StringCollection Destinatarios {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["Destinatarios"]));
+            }
+            set {
+                this["Destinatarios"] = value;
+            }
+        }
     }
 }

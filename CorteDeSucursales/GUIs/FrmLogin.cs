@@ -34,11 +34,12 @@ namespace CorteDeSucursales.GUIs
 
                 bool cerrar=false;
                 FrmCaptura frmCaptura = new FrmCaptura();
+                frmCaptura.user = usuario;
 
                 while (cerrar == false)
                 {
                     try
-                    {
+                    {                        
                         frmCaptura.ShowDialog();
                         cerrar = true;
                     }

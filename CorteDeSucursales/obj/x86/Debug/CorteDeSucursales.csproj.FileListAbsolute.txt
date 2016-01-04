@@ -1,11 +1,20 @@
 G:\Github\CorteDeSucursales\CorteDeSucursales\bin\Debug\Logs\borrame.txt
+G:\Github\CorteDeSucursales\CorteDeSucursales\bin\Debug\Plantillas\Plantilla.xlsx
 G:\Github\CorteDeSucursales\CorteDeSucursales\bin\Debug\CorteDeSucursales.exe.config
 G:\Github\CorteDeSucursales\CorteDeSucursales\bin\Debug\CorteDeSucursales.exe
 G:\Github\CorteDeSucursales\CorteDeSucursales\bin\Debug\CorteDeSucursales.pdb
+G:\Github\CorteDeSucursales\CorteDeSucursales\bin\Debug\ExcelApi.dll
 G:\Github\CorteDeSucursales\CorteDeSucursales\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
 G:\Github\CorteDeSucursales\CorteDeSucursales\bin\Debug\ModelosDeConfiguracion.dll
+G:\Github\CorteDeSucursales\CorteDeSucursales\bin\Debug\NetOffice.dll
+G:\Github\CorteDeSucursales\CorteDeSucursales\bin\Debug\OfficeApi.dll
+G:\Github\CorteDeSucursales\CorteDeSucursales\bin\Debug\VBIDEApi.dll
 G:\Github\CorteDeSucursales\CorteDeSucursales\bin\Debug\ModelosDeConfiguracion.pdb
+G:\Github\CorteDeSucursales\CorteDeSucursales\bin\Debug\ExcelApi.xml
 G:\Github\CorteDeSucursales\CorteDeSucursales\bin\Debug\FirebirdSql.Data.FirebirdClient.pdb
+G:\Github\CorteDeSucursales\CorteDeSucursales\bin\Debug\NetOffice.xml
+G:\Github\CorteDeSucursales\CorteDeSucursales\bin\Debug\OfficeApi.xml
+G:\Github\CorteDeSucursales\CorteDeSucursales\bin\Debug\VBIDEApi.xml
 G:\Github\CorteDeSucursales\CorteDeSucursales\obj\x86\Debug\CorteDeSucursales.csprojResolveAssemblyReference.cache
 G:\Github\CorteDeSucursales\CorteDeSucursales\obj\x86\Debug\CorteDeSucursales.GUIs.FrmAnalisisCorte.resources
 G:\Github\CorteDeSucursales\CorteDeSucursales\obj\x86\Debug\CorteDeSucursales.GUIs.FrmCaptura.resources
@@ -17,3 +26,4 @@ G:\Github\CorteDeSucursales\CorteDeSucursales\obj\x86\Debug\CorteDeSucursales.cs
 G:\Github\CorteDeSucursales\CorteDeSucursales\obj\x86\Debug\CorteDeSucursales.exe.licenses
 G:\Github\CorteDeSucursales\CorteDeSucursales\obj\x86\Debug\CorteDeSucursales.exe
 G:\Github\CorteDeSucursales\CorteDeSucursales\obj\x86\Debug\CorteDeSucursales.pdb
+G:\Github\CorteDeSucursales\CorteDeSucursales\obj\x86\Debug\CorteDeSucursales.GUIs.FrmChequesTransferencias.resources

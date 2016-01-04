@@ -56,11 +56,24 @@ namespace CorteDeSucursales.GUIs
                 lbUsuarios.DataSource = Usuarios;
                 lbUsuarios.DisplayMember = "sNombreUsuario";
             }
+
+            // Inicializar Envio de correos
+            txbServidorCorreo.Text = Properties.Settings.Default.ServidorCorreo;
+            txbDireccionEnvio.Text = Properties.Settings.Default.CorreoEnvio;
+            txbContraseñaCorreo.Text = Properties.Settings.Default.ContraseniaCorreo;
+            txbPuertoCorreo.Text = Properties.Settings.Default.PuertoCorreo;
+
+            foreach(string sDestinatario in Properties.Settings.Default.Destinatarios)
+            {
+                txbDestinatarios.Text += sDestinatario + Environment.NewLine;
+            }
         }
         private void llenarGridConceptos()
         {
             try
             {
+                gridCheques.DataSource = null;
+                gridEfectivo.DataSource = null;
                 FBDAL dal = new FBDAL();
                 var lstConceptos = dal.ObtenerConceptosCC();
                 List<SeleccionConceptosCC> lstConceptosEfectivo = new List<SeleccionConceptosCC>();
@@ -276,6 +289,34 @@ namespace CorteDeSucursales.GUIs
             Properties.Settings.Default.Save();
 
             MessageBox.Show("Los conceptos fueron guardados con exito!!!");
+        }
+
+        private void btnCargarDatos_Click(object sender, EventArgs e)
+        {
+            llenarGridConceptos();
+            if (gvCheques.RowCount == 0)
+            {
+                MessageBox.Show("Error en la configuración de la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnGuardarCorreo_Click(object sender, EventArgs e)
+        {
+            // Inicializar Envio de correos
+            Properties.Settings.Default.ServidorCorreo = txbServidorCorreo.Text;
+            Properties.Settings.Default.CorreoEnvio = txbDireccionEnvio.Text;
+            Properties.Settings.Default.ContraseniaCorreo = txbContraseñaCorreo.Text;
+            Properties.Settings.Default.PuertoCorreo = txbPuertoCorreo.Text;
+            string[] vectorDestinatarios = txbDestinatarios.Text.Replace(Environment.NewLine, " ").ToString().Split(' ');
+
+            Properties.Settings.Default.Destinatarios = new System.Collections.Specialized.StringCollection();
+            foreach (string sDestinatario in vectorDestinatarios)
+            {
+                Properties.Settings.Default.Destinatarios.Add(sDestinatario);
+            }
+
+            Properties.Settings.Default.Save();
+            MessageBox.Show("Los datos se guardaron con exito!!!", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConfigurar));
-            this.tbControl = new DevExpress.XtraTab.XtraTabControl();
+            this.tabEmail = new DevExpress.XtraTab.XtraTabControl();
             this.tabUsuarios = new DevExpress.XtraTab.XtraTabPage();
             this.btnModificarUsuario = new DevExpress.XtraEditors.SimpleButton();
             this.btnNuevoUsuario = new DevExpress.XtraEditors.SimpleButton();
@@ -62,6 +62,7 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txbServidor = new DevExpress.XtraEditors.TextEdit();
             this.tabConceptosCC = new DevExpress.XtraTab.XtraTabPage();
+            this.btnCargarDatos = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.gridCheques = new DevExpress.XtraGrid.GridControl();
@@ -75,12 +76,25 @@
             this.gvEfectivo = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colSeleccionado = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colConcepto = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.tabCorreo = new DevExpress.XtraTab.XtraTabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnGuardarCorreo = new System.Windows.Forms.Button();
+            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
+            this.txbServidorCorreo = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
+            this.txbDireccionEnvio = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
+            this.txbPuertoCorreo = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
+            this.txbContraseñaCorreo = new DevExpress.XtraEditors.TextEdit();
+            this.txbDestinatarios = new DevExpress.XtraEditors.MemoEdit();
             this.conceptosCCBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.lbTitulo = new DevExpress.XtraEditors.LabelControl();
             this.pnlTitulo = new DevExpress.XtraEditors.PanelControl();
-            ((System.ComponentModel.ISupportInitialize)(this.tbControl)).BeginInit();
-            this.tbControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tabEmail)).BeginInit();
+            this.tabEmail.SuspendLayout();
             this.tabUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnlUsuarios)).BeginInit();
             this.pnlUsuarios.SuspendLayout();
@@ -104,27 +118,35 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvCheques)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridEfectivo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvEfectivo)).BeginInit();
+            this.tabCorreo.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txbServidorCorreo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbDireccionEnvio.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbPuertoCorreo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbContraseñaCorreo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbDestinatarios.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.conceptosCCBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlTitulo)).BeginInit();
             this.pnlTitulo.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tbControl
+            // tabEmail
             // 
-            this.tbControl.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbControl.Appearance.Options.UseFont = true;
-            this.tbControl.AppearancePage.Header.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbControl.AppearancePage.Header.Options.UseFont = true;
-            this.tbControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbControl.Location = new System.Drawing.Point(0, 70);
-            this.tbControl.Name = "tbControl";
-            this.tbControl.SelectedTabPage = this.tabUsuarios;
-            this.tbControl.Size = new System.Drawing.Size(720, 447);
-            this.tbControl.TabIndex = 0;
-            this.tbControl.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.tabEmail.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabEmail.Appearance.Options.UseFont = true;
+            this.tabEmail.AppearancePage.Header.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabEmail.AppearancePage.Header.Options.UseFont = true;
+            this.tabEmail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabEmail.Location = new System.Drawing.Point(0, 70);
+            this.tabEmail.Name = "tabEmail";
+            this.tabEmail.SelectedTabPage = this.tabUsuarios;
+            this.tabEmail.Size = new System.Drawing.Size(720, 447);
+            this.tabEmail.TabIndex = 0;
+            this.tabEmail.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tabUsuarios,
             this.tabMicrosip,
-            this.tabConceptosCC});
+            this.tabConceptosCC,
+            this.tabCorreo});
             // 
             // tabUsuarios
             // 
@@ -471,6 +493,7 @@
             // 
             // tabConceptosCC
             // 
+            this.tabConceptosCC.Controls.Add(this.btnCargarDatos);
             this.tabConceptosCC.Controls.Add(this.labelControl15);
             this.tabConceptosCC.Controls.Add(this.labelControl14);
             this.tabConceptosCC.Controls.Add(this.gridCheques);
@@ -481,10 +504,22 @@
             this.tabConceptosCC.Size = new System.Drawing.Size(714, 416);
             this.tabConceptosCC.Text = "Conceptos CxC";
             // 
+            // btnCargarDatos
+            // 
+            this.btnCargarDatos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnCargarDatos.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCargarDatos.Appearance.Options.UseFont = true;
+            this.btnCargarDatos.Location = new System.Drawing.Point(236, 47);
+            this.btnCargarDatos.Name = "btnCargarDatos";
+            this.btnCargarDatos.Size = new System.Drawing.Size(242, 30);
+            this.btnCargarDatos.TabIndex = 29;
+            this.btnCargarDatos.Text = "Volver a cargar los datos";
+            this.btnCargarDatos.Click += new System.EventHandler(this.btnCargarDatos_Click);
+            // 
             // labelControl15
             // 
             this.labelControl15.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl15.Location = new System.Drawing.Point(364, 47);
+            this.labelControl15.Location = new System.Drawing.Point(364, 83);
             this.labelControl15.Name = "labelControl15";
             this.labelControl15.Size = new System.Drawing.Size(68, 18);
             this.labelControl15.TabIndex = 28;
@@ -493,7 +528,7 @@
             // labelControl14
             // 
             this.labelControl14.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl14.Location = new System.Drawing.Point(11, 47);
+            this.labelControl14.Location = new System.Drawing.Point(11, 83);
             this.labelControl14.Name = "labelControl14";
             this.labelControl14.Size = new System.Drawing.Size(66, 18);
             this.labelControl14.TabIndex = 27;
@@ -503,10 +538,10 @@
             // 
             this.gridCheques.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.gridCheques.DataSource = this.seleccionConceptosCCBindingSource;
-            this.gridCheques.Location = new System.Drawing.Point(364, 71);
+            this.gridCheques.Location = new System.Drawing.Point(364, 107);
             this.gridCheques.MainView = this.gvCheques;
             this.gridCheques.Name = "gridCheques";
-            this.gridCheques.Size = new System.Drawing.Size(343, 302);
+            this.gridCheques.Size = new System.Drawing.Size(343, 266);
             this.gridCheques.TabIndex = 26;
             this.gridCheques.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvCheques});
@@ -656,7 +691,7 @@
             // 
             // btnGuardarConceptos
             // 
-            this.btnGuardarConceptos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnGuardarConceptos.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnGuardarConceptos.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarConceptos.Appearance.Options.UseFont = true;
             this.btnGuardarConceptos.Location = new System.Drawing.Point(317, 379);
@@ -679,10 +714,10 @@
             // 
             this.gridEfectivo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.gridEfectivo.DataSource = this.seleccionConceptosCCBindingSource;
-            this.gridEfectivo.Location = new System.Drawing.Point(11, 71);
+            this.gridEfectivo.Location = new System.Drawing.Point(11, 107);
             this.gridEfectivo.MainView = this.gvEfectivo;
             this.gridEfectivo.Name = "gridEfectivo";
-            this.gridEfectivo.Size = new System.Drawing.Size(343, 302);
+            this.gridEfectivo.Size = new System.Drawing.Size(343, 266);
             this.gridEfectivo.TabIndex = 0;
             this.gridEfectivo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvEfectivo});
@@ -826,6 +861,146 @@
             this.colConcepto.Visible = true;
             this.colConcepto.VisibleIndex = 1;
             // 
+            // tabCorreo
+            // 
+            this.tabCorreo.Controls.Add(this.groupBox1);
+            this.tabCorreo.Name = "tabCorreo";
+            this.tabCorreo.Size = new System.Drawing.Size(714, 416);
+            this.tabCorreo.Text = "Envio de Correo";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnGuardarCorreo);
+            this.groupBox1.Controls.Add(this.labelControl13);
+            this.groupBox1.Controls.Add(this.txbServidorCorreo);
+            this.groupBox1.Controls.Add(this.labelControl20);
+            this.groupBox1.Controls.Add(this.labelControl17);
+            this.groupBox1.Controls.Add(this.txbDireccionEnvio);
+            this.groupBox1.Controls.Add(this.labelControl19);
+            this.groupBox1.Controls.Add(this.txbPuertoCorreo);
+            this.groupBox1.Controls.Add(this.labelControl18);
+            this.groupBox1.Controls.Add(this.txbContraseñaCorreo);
+            this.groupBox1.Controls.Add(this.txbDestinatarios);
+            this.groupBox1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
+            this.groupBox1.Location = new System.Drawing.Point(11, 18);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(696, 391);
+            this.groupBox1.TabIndex = 37;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Configuración para envio de correos";
+            // 
+            // btnGuardarCorreo
+            // 
+            this.btnGuardarCorreo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnGuardarCorreo.Location = new System.Drawing.Point(298, 357);
+            this.btnGuardarCorreo.Name = "btnGuardarCorreo";
+            this.btnGuardarCorreo.Size = new System.Drawing.Size(100, 28);
+            this.btnGuardarCorreo.TabIndex = 37;
+            this.btnGuardarCorreo.Text = "Guardar";
+            this.btnGuardarCorreo.UseVisualStyleBackColor = true;
+            this.btnGuardarCorreo.Click += new System.EventHandler(this.btnGuardarCorreo_Click);
+            // 
+            // labelControl13
+            // 
+            this.labelControl13.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelControl13.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl13.Location = new System.Drawing.Point(136, 64);
+            this.labelControl13.Name = "labelControl13";
+            this.labelControl13.Size = new System.Drawing.Size(108, 18);
+            this.labelControl13.TabIndex = 35;
+            this.labelControl13.Text = "Correo de envio:";
+            // 
+            // txbServidorCorreo
+            // 
+            this.txbServidorCorreo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txbServidorCorreo.Location = new System.Drawing.Point(250, 30);
+            this.txbServidorCorreo.Name = "txbServidorCorreo";
+            this.txbServidorCorreo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbServidorCorreo.Properties.Appearance.Options.UseFont = true;
+            this.txbServidorCorreo.Size = new System.Drawing.Size(349, 25);
+            this.txbServidorCorreo.TabIndex = 36;
+            // 
+            // labelControl20
+            // 
+            this.labelControl20.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelControl20.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl20.Location = new System.Drawing.Point(120, 33);
+            this.labelControl20.Name = "labelControl20";
+            this.labelControl20.Size = new System.Drawing.Size(124, 18);
+            this.labelControl20.TabIndex = 25;
+            this.labelControl20.Text = "Servidor de correo:";
+            // 
+            // labelControl17
+            // 
+            this.labelControl17.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelControl17.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl17.Location = new System.Drawing.Point(156, 157);
+            this.labelControl17.Name = "labelControl17";
+            this.labelControl17.Size = new System.Drawing.Size(88, 18);
+            this.labelControl17.TabIndex = 31;
+            this.labelControl17.Text = "Destinatarios:";
+            // 
+            // txbDireccionEnvio
+            // 
+            this.txbDireccionEnvio.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txbDireccionEnvio.Location = new System.Drawing.Point(250, 61);
+            this.txbDireccionEnvio.Name = "txbDireccionEnvio";
+            this.txbDireccionEnvio.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbDireccionEnvio.Properties.Appearance.Options.UseFont = true;
+            this.txbDireccionEnvio.Size = new System.Drawing.Size(349, 25);
+            this.txbDireccionEnvio.TabIndex = 26;
+            // 
+            // labelControl19
+            // 
+            this.labelControl19.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelControl19.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl19.Location = new System.Drawing.Point(98, 95);
+            this.labelControl19.Name = "labelControl19";
+            this.labelControl19.Size = new System.Drawing.Size(146, 18);
+            this.labelControl19.TabIndex = 27;
+            this.labelControl19.Text = "Contraseña de correo:";
+            // 
+            // txbPuertoCorreo
+            // 
+            this.txbPuertoCorreo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txbPuertoCorreo.Location = new System.Drawing.Point(250, 123);
+            this.txbPuertoCorreo.Name = "txbPuertoCorreo";
+            this.txbPuertoCorreo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbPuertoCorreo.Properties.Appearance.Options.UseFont = true;
+            this.txbPuertoCorreo.Size = new System.Drawing.Size(217, 25);
+            this.txbPuertoCorreo.TabIndex = 30;
+            // 
+            // labelControl18
+            // 
+            this.labelControl18.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelControl18.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl18.Location = new System.Drawing.Point(197, 126);
+            this.labelControl18.Name = "labelControl18";
+            this.labelControl18.Size = new System.Drawing.Size(47, 18);
+            this.labelControl18.TabIndex = 29;
+            this.labelControl18.Text = "Puerto:";
+            // 
+            // txbContraseñaCorreo
+            // 
+            this.txbContraseñaCorreo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txbContraseñaCorreo.Location = new System.Drawing.Point(250, 92);
+            this.txbContraseñaCorreo.Name = "txbContraseñaCorreo";
+            this.txbContraseñaCorreo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbContraseñaCorreo.Properties.Appearance.Options.UseFont = true;
+            this.txbContraseñaCorreo.Properties.PasswordChar = '*';
+            this.txbContraseñaCorreo.Size = new System.Drawing.Size(349, 25);
+            this.txbContraseñaCorreo.TabIndex = 28;
+            // 
+            // txbDestinatarios
+            // 
+            this.txbDestinatarios.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txbDestinatarios.Location = new System.Drawing.Point(98, 181);
+            this.txbDestinatarios.Name = "txbDestinatarios";
+            this.txbDestinatarios.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbDestinatarios.Properties.Appearance.Options.UseFont = true;
+            this.txbDestinatarios.Size = new System.Drawing.Size(501, 170);
+            this.txbDestinatarios.TabIndex = 32;
+            // 
             // conceptosCCBindingSource
             // 
             this.conceptosCCBindingSource.DataSource = typeof(CorteDeSucursales.Modelos.ConceptosCC);
@@ -865,15 +1040,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(720, 517);
-            this.Controls.Add(this.tbControl);
+            this.Controls.Add(this.tabEmail);
             this.Controls.Add(this.pnlTitulo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmConfigurar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Carnicería Los Corrales - Corte de Sucursal - Configurar";
             this.Load += new System.EventHandler(this.FrmConfigurar_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.tbControl)).EndInit();
-            this.tbControl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tabEmail)).EndInit();
+            this.tabEmail.ResumeLayout(false);
             this.tabUsuarios.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pnlUsuarios)).EndInit();
             this.pnlUsuarios.ResumeLayout(false);
@@ -900,6 +1075,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvCheques)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridEfectivo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvEfectivo)).EndInit();
+            this.tabCorreo.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txbServidorCorreo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbDireccionEnvio.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbPuertoCorreo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbContraseñaCorreo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbDestinatarios.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.conceptosCCBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlTitulo)).EndInit();
             this.pnlTitulo.ResumeLayout(false);
@@ -910,7 +1093,7 @@
 
         #endregion
 
-        private DevExpress.XtraTab.XtraTabControl tbControl;
+        private DevExpress.XtraTab.XtraTabControl tabEmail;
         private DevExpress.XtraTab.XtraTabPage tabUsuarios;
         private DevExpress.XtraTab.XtraTabPage tabMicrosip;
         private DevExpress.XtraEditors.LabelControl labelControl1;
@@ -959,5 +1142,19 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gvCheques;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraEditors.SimpleButton btnCargarDatos;
+        private DevExpress.XtraTab.XtraTabPage tabCorreo;
+        private DevExpress.XtraEditors.LabelControl labelControl13;
+        private DevExpress.XtraEditors.TextEdit txbServidorCorreo;
+        private DevExpress.XtraEditors.LabelControl labelControl17;
+        private DevExpress.XtraEditors.LabelControl labelControl18;
+        private DevExpress.XtraEditors.TextEdit txbPuertoCorreo;
+        private DevExpress.XtraEditors.LabelControl labelControl19;
+        private DevExpress.XtraEditors.TextEdit txbContraseñaCorreo;
+        private DevExpress.XtraEditors.LabelControl labelControl20;
+        private DevExpress.XtraEditors.TextEdit txbDireccionEnvio;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnGuardarCorreo;
+        private DevExpress.XtraEditors.MemoEdit txbDestinatarios;
     }
 }

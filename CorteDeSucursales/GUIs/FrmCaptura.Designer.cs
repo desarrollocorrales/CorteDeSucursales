@@ -33,6 +33,7 @@
             this.lblTitulo = new DevExpress.XtraEditors.LabelControl();
             this.lblFecha = new DevExpress.XtraEditors.LabelControl();
             this.pnlEncabezado = new DevExpress.XtraEditors.PanelControl();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.grpPuntoDeVenta = new DevExpress.XtraEditors.GroupControl();
             this.btnPV = new DevExpress.XtraEditors.SimpleButton();
             this.gridPV = new DevExpress.XtraGrid.GridControl();
@@ -83,6 +84,7 @@
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnAnalizarCorte = new DevExpress.XtraEditors.SimpleButton();
+            this.btnInformacion = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pnlEncabezado)).BeginInit();
             this.pnlEncabezado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpPuntoDeVenta)).BeginInit();
@@ -143,6 +145,7 @@
             // 
             // pnlEncabezado
             // 
+            this.pnlEncabezado.Controls.Add(this.dateTimePicker1);
             this.pnlEncabezado.Controls.Add(this.lblTitulo);
             this.pnlEncabezado.Controls.Add(this.lblFecha);
             this.pnlEncabezado.Dock = System.Windows.Forms.DockStyle.Top;
@@ -150,6 +153,14 @@
             this.pnlEncabezado.Name = "pnlEncabezado";
             this.pnlEncabezado.Size = new System.Drawing.Size(984, 41);
             this.pnlEncabezado.TabIndex = 3;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(38, 10);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 21);
+            this.dateTimePicker1.TabIndex = 3;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // grpPuntoDeVenta
             // 
@@ -1490,18 +1501,32 @@
             this.btnAnalizarCorte.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAnalizarCorte.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnalizarCorte.Appearance.Options.UseFont = true;
-            this.btnAnalizarCorte.Location = new System.Drawing.Point(432, 677);
+            this.btnAnalizarCorte.Enabled = false;
+            this.btnAnalizarCorte.Location = new System.Drawing.Point(522, 677);
             this.btnAnalizarCorte.Name = "btnAnalizarCorte";
             this.btnAnalizarCorte.Size = new System.Drawing.Size(120, 23);
             this.btnAnalizarCorte.TabIndex = 11;
             this.btnAnalizarCorte.Text = "Analizar Corte";
             this.btnAnalizarCorte.Click += new System.EventHandler(this.btnAnalizarCorte_Click);
             // 
+            // btnInformacion
+            // 
+            this.btnInformacion.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnInformacion.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInformacion.Appearance.Options.UseFont = true;
+            this.btnInformacion.Location = new System.Drawing.Point(343, 677);
+            this.btnInformacion.Name = "btnInformacion";
+            this.btnInformacion.Size = new System.Drawing.Size(173, 23);
+            this.btnInformacion.TabIndex = 12;
+            this.btnInformacion.Text = "Cheques y transferencias";
+            this.btnInformacion.Click += new System.EventHandler(this.btnInformacion_Click);
+            // 
             // FrmCaptura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 712);
+            this.Controls.Add(this.btnInformacion);
             this.Controls.Add(this.btnAnalizarCorte);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.grp);
@@ -1610,5 +1635,7 @@
         private DevExpress.XtraEditors.SimpleButton btnAnalizarCorte;
         private DevExpress.XtraEditors.SimpleButton btnCargarTarjetas;
         private DevExpress.XtraEditors.SimpleButton btnFaltantesSobrantes;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private DevExpress.XtraEditors.SimpleButton btnInformacion;
     }
 }

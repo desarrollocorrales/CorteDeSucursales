@@ -48,8 +48,23 @@
     <Reference Include="DevExpress.XtraEditors.v11.1, Version=11.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v11.1, Version=11.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v11.1, Version=11.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="ExcelApi, Version=1.7.3.0, Culture=neutral, PublicKeyToken=9084b9221296229e, processorArchitecture=MSIL">
+      <HintPath>packages\NetOffice.Excel.1.7.3.0\lib\net40\ExcelApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="FirebirdSql.Data.FirebirdClient, Version=4.5.0.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL">
       <HintPath>packages\FirebirdSql.Data.FirebirdClient.4.5.0.0\lib\net40-client\FirebirdSql.Data.FirebirdClient.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NetOffice, Version=1.7.3.0, Culture=neutral, PublicKeyToken=297f57b43ae7c1de, processorArchitecture=MSIL">
+      <HintPath>packages\NetOffice.Core.1.7.3.0\lib\net40\NetOffice.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OfficeApi, Version=1.7.3.0, Culture=neutral, PublicKeyToken=a39beb0835c43c8e, processorArchitecture=MSIL">
+      <HintPath>packages\NetOffice.Core.1.7.3.0\lib\net40\OfficeApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -66,8 +81,14 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="VBIDEApi, Version=1.7.3.0, Culture=neutral, PublicKeyToken=931cec8882205047, processorArchitecture=MSIL">
+      <HintPath>packages\NetOffice.Core.1.7.3.0\lib\net40\VBIDEApi.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\ExcelDAL.cs" />
     <Compile Include="DAL\FBDAL.cs" />
     <Compile Include="GUIs\FrmAnalisisCorte.cs">
       <SubType>Form</SubType>
@@ -80,6 +101,12 @@
     </Compile>
     <Compile Include="GUIs\FrmCaptura.Designer.cs">
       <DependentUpon>FrmCaptura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIs\FrmChequesTransferencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUIs\FrmChequesTransferencias.Designer.cs">
+      <DependentUpon>FrmChequesTransferencias.cs</DependentUpon>
     </Compile>
     <Compile Include="GUIs\FrmConfigurar.cs">
       <SubType>Form</SubType>
@@ -100,6 +127,7 @@
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Modelos\Cajas.cs" />
+    <Compile Include="Modelos\ChequeTransferencia.cs" />
     <Compile Include="Modelos\ConceptosCC.cs" />
     <Compile Include="Modelos\DoctosCC.cs" />
     <Compile Include="Modelos\DoctosPV.cs" />
@@ -116,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUIs\FrmCaptura.resx">
       <DependentUpon>FrmCaptura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUIs\FrmChequesTransferencias.resx">
+      <DependentUpon>FrmChequesTransferencias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUIs\FrmConfigurar.resx">
       <DependentUpon>FrmConfigurar.cs</DependentUpon>
@@ -139,6 +170,10 @@
     </Compile>
     <None Include="app.config" />
     <None Include="packages.config" />
+    <None Include="Plantillas\Plantilla.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\DataSources\CorteDeSucursales.Modelos.ChequeTransferencia.datasource" />
     <None Include="Properties\DataSources\CorteDeSucursales.Modelos.ConceptosCC.datasource" />
     <None Include="Properties\DataSources\CorteDeSucursales.Modelos.DoctosCC.datasource" />
     <None Include="Properties\DataSources\CorteDeSucursales.Modelos.DoctosPV.datasource" />

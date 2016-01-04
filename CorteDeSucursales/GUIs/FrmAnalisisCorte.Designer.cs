@@ -73,6 +73,7 @@
             this.btnCuadrar = new DevExpress.XtraEditors.SimpleButton();
             this.lblCuadre = new DevExpress.XtraEditors.LabelControl();
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
+            this.btnEnviarCorreo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pnlTitulo)).BeginInit();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpVentasDelDia)).BeginInit();
@@ -471,7 +472,7 @@
             this.btnDetallesCxC.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnDetallesCxC.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDetallesCxC.Appearance.Options.UseFont = true;
-            this.btnDetallesCxC.Location = new System.Drawing.Point(340, 474);
+            this.btnDetallesCxC.Location = new System.Drawing.Point(332, 474);
             this.btnDetallesCxC.Name = "btnDetallesCxC";
             this.btnDetallesCxC.Size = new System.Drawing.Size(220, 26);
             this.btnDetallesCxC.TabIndex = 10;
@@ -563,6 +564,17 @@
             this.labelControl17.TabIndex = 17;
             this.labelControl17.Text = "Importe para cuadre:";
             // 
+            // btnEnviarCorreo
+            // 
+            this.btnEnviarCorreo.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviarCorreo.Location = new System.Drawing.Point(783, 398);
+            this.btnEnviarCorreo.Name = "btnEnviarCorreo";
+            this.btnEnviarCorreo.Size = new System.Drawing.Size(86, 47);
+            this.btnEnviarCorreo.TabIndex = 18;
+            this.btnEnviarCorreo.Text = "Enviar Correo";
+            this.btnEnviarCorreo.UseVisualStyleBackColor = true;
+            this.btnEnviarCorreo.Click += new System.EventHandler(this.btnEnviarCorreo_Click);
+            // 
             // FrmAnalisisCorte
             // 
             this.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -570,6 +582,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 512);
+            this.Controls.Add(this.btnEnviarCorreo);
             this.Controls.Add(this.labelControl17);
             this.Controls.Add(this.lblCuadre);
             this.Controls.Add(this.btnCuadrar);
@@ -646,6 +659,7 @@
         private DevExpress.XtraEditors.SimpleButton btnCuadrar;
         private DevExpress.XtraEditors.LabelControl lblCuadre;
         private DevExpress.XtraEditors.LabelControl labelControl17;
+        private System.Windows.Forms.Button btnEnviarCorreo;
 
     }
 }

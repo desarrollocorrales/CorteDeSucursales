@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Drawing;
 using CorteDeSucursales.Modelos;
+using System.Net.Mail;
 
 namespace CorteDeSucursales.GUIs
 {
     public partial class FrmAnalisisCorte : DevExpress.XtraEditors.XtraForm
     {
+        public string sPathExcel;
         public DateTime hoy;
         private decimal dTotalVentas = 0, dTotalDepositos = 0, dTotalCuadre;
 
@@ -65,7 +67,7 @@ namespace CorteDeSucursales.GUIs
         {
             decimal dTotalDiferencia = dTotalVentas - dTotalDepositos;
 
-            if ((dTotalDiferencia >= 0 && dTotalDiferencia <= 1) || (dTotalDiferencia <= 0 && dTotalDiferencia >= -1))
+            if ((dTotalDiferencia >= 0 && dTotalDiferencia <= 10) || (dTotalDiferencia <= 0 && dTotalDiferencia >= -10))
             {
                 lblAdvertencia.Text = "¡ FELICIDADES !";
                 lblAdvertencia.ForeColor = Color.Green;
@@ -73,7 +75,7 @@ namespace CorteDeSucursales.GUIs
                 lblResultado.ForeColor = Color.Orange;
                 lblDiferncia.Text = dTotalDiferencia.ToString("c");
             }
-            else if (dTotalDiferencia > 1)
+            else if (dTotalDiferencia > 10)
             {
                 lblAdvertencia.Text = "¡¡¡ ADVERTENCIA !!!";
                 lblAdvertencia.ForeColor = Color.Red;
@@ -112,6 +114,52 @@ namespace CorteDeSucursales.GUIs
             lblDiferncia.ForeColor = Color.Black;
 
             lblCuadre.Text = dTotalCuadre.ToString("c");
+
+            lblAdvertencia.Text = "¡ FELICIDADES !";
+            lblAdvertencia.ForeColor = Color.Green;
+            lblResultado.Text = "¡¡¡ CORTE CORRECTO !!!";
+            lblResultado.ForeColor = Color.Orange;
         }
+
+        private void btnEnviarCorreo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                EnviarEmail();
+            }
+            catch
+            {
+
+            }
+        }
+
+        #region *** Enviar Emails ***
+
+        private void EnviarEmail()
+        {
+            MailMessage Correo = new MailMessage();
+            Correo.From = new MailAddress(Properties.Settings.Default.CorreoEnvio, "Corte de Sucursal " + Properties.Settings.Default.Sucursal);
+
+            foreach (string direccion in Properties.Settings.Default.Destinatarios)
+            {
+                Correo.To.Add(direccion);
+            }
+
+            Correo.Subject = "Corte de Sucursal " + Properties.Settings.Default.Sucursal + " " + hoy.ToString("ssMMMMyyyy");
+            Correo.Body = "Se adjunta el corte de sucursal del dia " + hoy.ToString("dd-MMM-yyyy");
+            Correo.IsBodyHtml = false;
+            Correo.Attachments.Add(new Attachment(sPathExcel));
+
+            SmtpClient SmtpMail = new SmtpClient();
+            SmtpMail.Host = Properties.Settings.Default.ServidorCorreo;
+            SmtpMail.Port = Convert.ToInt32(Properties.Settings.Default.PuertoCorreo);
+            string usuario = Properties.Settings.Default.CorreoEnvio;
+            string password = Properties.Settings.Default.ContraseniaCorreo;
+            SmtpMail.Credentials = new System.Net.NetworkCredential(usuario, password);
+            SmtpMail.EnableSsl = false;
+            SmtpMail.Send(Correo);
+        }
+
+        #endregion
     }
 }
