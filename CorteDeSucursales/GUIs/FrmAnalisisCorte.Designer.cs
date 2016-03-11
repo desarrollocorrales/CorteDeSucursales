@@ -73,7 +73,7 @@
             this.btnCuadrar = new DevExpress.XtraEditors.SimpleButton();
             this.lblCuadre = new DevExpress.XtraEditors.LabelControl();
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
-            this.btnEnviarCorreo = new System.Windows.Forms.Button();
+            this.btnEnviarEmail = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pnlTitulo)).BeginInit();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpVentasDelDia)).BeginInit();
@@ -564,16 +564,17 @@
             this.labelControl17.TabIndex = 17;
             this.labelControl17.Text = "Importe para cuadre:";
             // 
-            // btnEnviarCorreo
+            // btnEnviarEmail
             // 
-            this.btnEnviarCorreo.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnviarCorreo.Location = new System.Drawing.Point(783, 398);
-            this.btnEnviarCorreo.Name = "btnEnviarCorreo";
-            this.btnEnviarCorreo.Size = new System.Drawing.Size(86, 47);
-            this.btnEnviarCorreo.TabIndex = 18;
-            this.btnEnviarCorreo.Text = "Enviar Correo";
-            this.btnEnviarCorreo.UseVisualStyleBackColor = true;
-            this.btnEnviarCorreo.Click += new System.EventHandler(this.btnEnviarCorreo_Click);
+            this.btnEnviarEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnEnviarEmail.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviarEmail.Appearance.Options.UseFont = true;
+            this.btnEnviarEmail.Location = new System.Drawing.Point(377, 448);
+            this.btnEnviarEmail.Name = "btnEnviarEmail";
+            this.btnEnviarEmail.Size = new System.Drawing.Size(131, 23);
+            this.btnEnviarEmail.TabIndex = 19;
+            this.btnEnviarEmail.Text = "Enviar Correo";
+            this.btnEnviarEmail.Click += new System.EventHandler(this.btnEnviarEmail_Click);
             // 
             // FrmAnalisisCorte
             // 
@@ -582,7 +583,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 512);
-            this.Controls.Add(this.btnEnviarCorreo);
+            this.Controls.Add(this.btnEnviarEmail);
             this.Controls.Add(this.labelControl17);
             this.Controls.Add(this.lblCuadre);
             this.Controls.Add(this.btnCuadrar);
@@ -659,7 +660,7 @@
         private DevExpress.XtraEditors.SimpleButton btnCuadrar;
         private DevExpress.XtraEditors.LabelControl lblCuadre;
         private DevExpress.XtraEditors.LabelControl labelControl17;
-        private System.Windows.Forms.Button btnEnviarCorreo;
+        private DevExpress.XtraEditors.SimpleButton btnEnviarEmail;
 
     }
 }

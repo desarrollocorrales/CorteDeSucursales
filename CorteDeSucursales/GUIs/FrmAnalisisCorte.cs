@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Drawing;
 using CorteDeSucursales.Modelos;
 using System.Net.Mail;
+using System.Windows.Forms;
+using ModelosDeConfiguracion;
 
 namespace CorteDeSucursales.GUIs
 {
     public partial class FrmAnalisisCorte : DevExpress.XtraEditors.XtraForm
     {
+        public Usuario UsuarioCorte;
         public string sPathExcel;
         public DateTime hoy;
         private decimal dTotalVentas = 0, dTotalDepositos = 0, dTotalCuadre;
@@ -121,19 +124,19 @@ namespace CorteDeSucursales.GUIs
             lblResultado.ForeColor = Color.Orange;
         }
 
-        private void btnEnviarCorreo_Click(object sender, EventArgs e)
+        #region *** Enviar Emails ***
+
+        private void btnEnviarEmail_Click(object sender, EventArgs e)
         {
             try
             {
                 EnviarEmail();
             }
-            catch
+            catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
         }
-
-        #region *** Enviar Emails ***
 
         private void EnviarEmail()
         {
@@ -142,11 +145,14 @@ namespace CorteDeSucursales.GUIs
 
             foreach (string direccion in Properties.Settings.Default.Destinatarios)
             {
-                Correo.To.Add(direccion);
+                if (direccion.Trim() != string.Empty)
+                    Correo.To.Add(direccion);
             }
 
-            Correo.Subject = "Corte de Sucursal " + Properties.Settings.Default.Sucursal + " " + hoy.ToString("ssMMMMyyyy");
+            Correo.Subject = "Corte de Sucursal " + Properties.Settings.Default.Sucursal + " " + hoy.ToString("dd MMMM yyyy");
             Correo.Body = "Se adjunta el corte de sucursal del dia " + hoy.ToString("dd-MMM-yyyy");
+            Correo.Body = "<br />";
+            Correo.Body += "Corte capturado por el usuario: " + UsuarioCorte.sNombreCompleto;
             Correo.IsBodyHtml = false;
             Correo.Attachments.Add(new Attachment(sPathExcel));
 
@@ -158,6 +164,8 @@ namespace CorteDeSucursales.GUIs
             SmtpMail.Credentials = new System.Net.NetworkCredential(usuario, password);
             SmtpMail.EnableSsl = false;
             SmtpMail.Send(Correo);
+
+            MessageBox.Show("Correo enviado con exito!");
         }
 
         #endregion

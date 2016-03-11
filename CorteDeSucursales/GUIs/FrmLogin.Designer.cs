@@ -54,7 +54,7 @@
             // 
             // txbUsuario
             // 
-            this.txbUsuario.EditValue = "memo";
+            this.txbUsuario.EditValue = "";
             this.txbUsuario.Location = new System.Drawing.Point(108, 174);
             this.txbUsuario.Name = "txbUsuario";
             this.txbUsuario.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -82,7 +82,7 @@
             // 
             // txbContraseña
             // 
-            this.txbContraseña.EditValue = "123456";
+            this.txbContraseña.EditValue = "";
             this.txbContraseña.Location = new System.Drawing.Point(108, 205);
             this.txbContraseña.Name = "txbContraseña";
             this.txbContraseña.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

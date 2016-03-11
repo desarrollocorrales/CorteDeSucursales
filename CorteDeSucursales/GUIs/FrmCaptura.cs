@@ -318,6 +318,7 @@ namespace CorteDeSucursales.GUIs
             EnviarAExcel();
             ObtenerTotales();
             FrmAnalisisCorte frmAnalisisDeCorte = new FrmAnalisisCorte(lstTotales);
+            frmAnalisisDeCorte.UsuarioCorte = this.user;
             frmAnalisisDeCorte.hoy = hoy;
             frmAnalisisDeCorte.sPathExcel = sPathExcel;
             frmAnalisisDeCorte.ShowDialog();

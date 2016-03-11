@@ -1002,7 +1002,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Corte en Sucursales"
         "ProductCode" = "8:{9CAEB9C7-2B1A-48D1-9BFC-D9A565EBBBB3}"
-        "PackageCode" = "8:{F873913A-013A-4E2B-A245-900E153E5070}"
+        "PackageCode" = "8:{1B162501-9FE1-40A2-9D14-7928694921F4}"
         "UpgradeCode" = "8:{E65E431A-E046-4AB9-A10D-413C16C90D7A}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
