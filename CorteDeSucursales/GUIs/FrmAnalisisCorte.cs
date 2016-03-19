@@ -150,8 +150,7 @@ namespace CorteDeSucursales.GUIs
             }
 
             Correo.Subject = "Corte de Sucursal " + Properties.Settings.Default.Sucursal + " " + hoy.ToString("dd MMMM yyyy");
-            Correo.Body = "Se adjunta el corte de sucursal del dia " + hoy.ToString("dd-MMM-yyyy");
-            Correo.Body = "<br />";
+            Correo.Body += "Se adjunta el corte de sucursal del dia " + hoy.ToString("dd-MMM-yyyy") + Environment.NewLine;
             Correo.Body += "Corte capturado por el usuario: " + UsuarioCorte.sNombreCompleto;
             Correo.IsBodyHtml = false;
             Correo.Attachments.Add(new Attachment(sPathExcel));

@@ -2,3 +2,4 @@ G:\Github\CorteDeSucursales\ModelosDeConfiguracion\bin\Debug\ModelosDeConfigurac
 G:\Github\CorteDeSucursales\ModelosDeConfiguracion\bin\Debug\ModelosDeConfiguracion.pdb
 G:\Github\CorteDeSucursales\ModelosDeConfiguracion\obj\Debug\ModelosDeConfiguracion.dll
 G:\Github\CorteDeSucursales\ModelosDeConfiguracion\obj\Debug\ModelosDeConfiguracion.pdb
+G:\Github\CorteDeSucursales\ModelosDeConfiguracion\obj\Debug\ModelosDeConfiguracion.csprojResolveAssemblyReference.cache

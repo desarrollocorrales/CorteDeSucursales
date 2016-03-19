@@ -10,6 +10,8 @@ namespace CorteDeSucursales.GUIs
 {
     public partial class FrmCaptura : DevExpress.XtraEditors.XtraForm
     {
+        private List<ChequeTransferencia> lstCheques;
+        private List<ChequeTransferencia> lstTransferencias;
         private List<Total> lstTotales;
         private DateTime hoy;
         public Usuario user;
@@ -24,6 +26,8 @@ namespace CorteDeSucursales.GUIs
         {
             Inicializar();
             frmChequesTransferencias = new FrmChequesTransferencias();
+            lstCheques = new List<ChequeTransferencia>();
+            lstTransferencias = new List<ChequeTransferencia>();
         }
         private void Inicializar()
         {
@@ -601,6 +605,28 @@ namespace CorteDeSucursales.GUIs
                 btnAnalizarCorte.Enabled = true;
             else
                 btnAnalizarCorte.Enabled = false;
+
+            lstCheques = frmChequesTransferencias.lstCheques;
+            lstTransferencias = frmChequesTransferencias.lstTransferencias;
+
+            var lstAux = new List<ChequeTransferencia>();
+            lstAux.AddRange(lstCheques);
+            lstAux.AddRange(lstTransferencias);
+
+            var lstDoctosPV = new List<DoctosPV>();
+            foreach (ChequeTransferencia ct in lstAux)
+            {
+                DoctosPV doctos = new DoctosPV();
+                doctos.CajaID = 0;
+                doctos.NombreCaja = ct.Identificador;
+                doctos.Neto = ct.Importe;
+                doctos.Impuesto = 0;
+
+                lstDoctosPV.Add(doctos);                
+            }
+
+            gridMasEfectivos.DataSource = lstDoctosPV;
+            gvMasEfectivos.BestFitColumns();
         }
     }
 };

@@ -18,6 +18,7 @@ G:\Github\CorteDeSucursales\CorteDeSucursales\bin\Debug\VBIDEApi.xml
 G:\Github\CorteDeSucursales\CorteDeSucursales\obj\x86\Debug\CorteDeSucursales.csprojResolveAssemblyReference.cache
 G:\Github\CorteDeSucursales\CorteDeSucursales\obj\x86\Debug\CorteDeSucursales.GUIs.FrmAnalisisCorte.resources
 G:\Github\CorteDeSucursales\CorteDeSucursales\obj\x86\Debug\CorteDeSucursales.GUIs.FrmCaptura.resources
+G:\Github\CorteDeSucursales\CorteDeSucursales\obj\x86\Debug\CorteDeSucursales.GUIs.FrmChequesTransferencias.resources
 G:\Github\CorteDeSucursales\CorteDeSucursales\obj\x86\Debug\CorteDeSucursales.GUIs.FrmConfigurar.resources
 G:\Github\CorteDeSucursales\CorteDeSucursales\obj\x86\Debug\CorteDeSucursales.GUIs.FrmDetallesCxCIngresos.resources
 G:\Github\CorteDeSucursales\CorteDeSucursales\obj\x86\Debug\CorteDeSucursales.GUIs.FrmLogin.resources
@@ -26,4 +27,3 @@ G:\Github\CorteDeSucursales\CorteDeSucursales\obj\x86\Debug\CorteDeSucursales.cs
 G:\Github\CorteDeSucursales\CorteDeSucursales\obj\x86\Debug\CorteDeSucursales.exe.licenses
 G:\Github\CorteDeSucursales\CorteDeSucursales\obj\x86\Debug\CorteDeSucursales.exe
 G:\Github\CorteDeSucursales\CorteDeSucursales\obj\x86\Debug\CorteDeSucursales.pdb
-G:\Github\CorteDeSucursales\CorteDeSucursales\obj\x86\Debug\CorteDeSucursales.GUIs.FrmChequesTransferencias.resources
